@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+
+  "header": {
+    "title": "Welcome to our store",
+    "subtitle": "Quality products at fair prices"
+  },
+
+  "about": {
+    "title": "About Us",
+    "text": "We are a company focused on quality and trust."
+  },
+
+  "products": {
+    "apple": {
+      "name": "Apple",
+      "desc": "Fresh red apple"
+    }
+  },
+
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}

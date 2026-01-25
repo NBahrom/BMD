@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nameKey": "products.apple.name",
+    "descKey": "products.apple.desc",
+    "price": 10
+  },
+  {
+    "id": 2,
+    "nameKey": "products.banana.name",
+    "descKey": "products.banana.desc",
+    "price": 8
+  }
+]

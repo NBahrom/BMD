@@ -1,29 +1,88 @@
 {
   "nav": {
-    "home": "Home",
-    "products": "Products",
+    "artists": "Artists",
     "about": "About",
-    "contact": "Contact"
+    "book" : "Book artist",
+    "booking": "booking",
+    "nav": "navigation"
   },
 
-  "header": {
-    "title": "Welcome to our store",
-    "subtitle": "Quality products at fair prices"
+  "btns": {
+    "loadMore": "load more"
   },
 
-  "about": {
-    "title": "About Us",
-    "text": "We are a company focused on quality and trust."
+  "home": {
+    "title": "Curatorial artist agency uniting the best musicians and DJs of Uzbekistan"
   },
 
-  "products": {
-    "apple": {
-      "name": "Apple",
-      "desc": "Fresh red apple"
+
+  "categories": {
+    "viewAll": "View all",
+    "vocal": "Vocal Artist",
+    "live": "Live Project",
+    "dj": "DJ",
+    "visual": "Visual Production"
+  },
+
+  "singers": {
+    "emeli": {
+      "name": "Emeli",
+      "desc": "A live vocal performer known for emotional and powerful performances."
+    },
+
+    "ravshan": {
+      "name": "Ravshan Nematov",
+      "desc": "A DJ delivering energetic sets with modern electronic sound."
+    },
+
+    "mosaiq8e": {
+      "name": "Mosaiq8e",
+      "desc": "A visual artist creating immersive audiovisual experiences."
+    },
+
+    "madlen": {
+      "name": "Madlen",
+      "desc": "A live performer blending atmosphere and stage presence."
+    },
+
+    "hansley": {
+      "name": "Hansley",
+      "desc": "A vocal artist with a distinctive tone and expressive delivery."
+    },
+
+    "alexey": {
+      "name": "Alexey",
+      "desc": "A versatile live and vocal performer with strong stage energy."
+    },
+
+    "qaraqoom": {
+      "name": "Qaraqoom",
+      "desc": "A live act inspired by deep soundscapes and modern rhythms."
+    },
+
+    "mitch": {
+      "name": "Mitch",
+      "desc": "A vocal performer with a smooth and modern sound."
+    },
+
+    "kmrn": {
+      "name": "KMRN",
+      "desc": "A DJ focused on electronic music and club-oriented performances."
     }
   },
 
   "footer": {
-    "rights": "All rights reserved"
+    "aboutText": "BMD Talent Agency — кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана.",
+    "rights": "All Rights Reserved",
+    "privacyText": "Privacy Policy",
+    "termsText": "Terms and Conditions"
+  },
+
+  "contact": {
+    "adress": "Address",
+    "adressText": "C/ de Bailèn, 129, L’Eixample, 08037 Barcelona",
+    "contactUs": "Contact Us",
+    "contactName1": "marat bikineev",
+    "contactName2": "dima mitch"
   }
 }

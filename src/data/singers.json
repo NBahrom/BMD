@@ -1,0 +1,72 @@
+[
+  {
+    "id": "emeli",
+    "nameKey": "singers.emeli.name",
+    "categoryIds": ["vocal", "live"],
+    "descKey": "singers.emeli.desc",
+    "image": "/images/emeli.jpg"
+  },
+  {
+    "id": "ravshan",
+    "nameKey": "singers.ravshan.name",
+    "categoryIds": ["dj"],
+    "descKey": "singers.ravshan.desc",
+    "image": "/images/ravshannematov.jpg"
+  },
+  {
+    "id": "mosaiq8e",
+    "nameKey": "singers.mosaiq8e.name",
+    "categoryIds": ["visual"],
+    "descKey": "singers.mosaiq8e.desc",
+    "image": "/images/mosaiq8e.jpg"
+  },
+    {
+    "id": "madlen",
+    "nameKey": "singers.madlen.name",
+    "categoryIds": ["live"],
+    "descKey": "singers.madlen.desc",
+    "image": "/images/madlen.png"
+  },
+  {
+    "id": "hansley",
+    "nameKey": "singers.hansley.name",
+    "categoryIds": ["vocal"],
+    "descKey": "singers.hansley.desc",
+    "image": "/images/hansley.png"
+  },
+  {
+    "id": "alexey",
+    "nameKey": "singers.alexey.name",
+    "categoryIds": ["vocal", "live"],
+    "descKey": "singers.alexey.desc",
+    "image": "/images/alexey.png"
+  },
+  {
+    "id": "qaraqoom",
+    "nameKey": "singers.qaraqoom.name",
+    "categoryIds": ["live"],
+    "descKey": "singers.qaraqoom.desc",
+    "image": "/images/qaraqoom.png"
+  },
+  {
+    "id": "mitch",
+    "nameKey": "singers.mitch.name",
+    "categoryIds": ["vocal"],
+    "descKey": "singers.mitch.desc",
+    "image": "/images/mitch.png"
+  },
+  {
+    "id": "kmrn",
+    "nameKey": "singers.kmrn.name",
+    "categoryIds": ["dj"],
+    "descKey": "singers.kmrn.desc",
+    "image": "/images/kmrn.jpg"
+  },
+  {
+    "id": "kmrn",
+    "nameKey": "singers.kmrn.name",
+    "categoryIds": ["dj"],
+    "descKey": "singers.kmrn.desc",
+    "image": "/images/kmrn.jpg"
+  }
+]

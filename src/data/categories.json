@@ -1,0 +1,22 @@
+[
+    {
+        "id": "viewAll",
+        "label": "View all"
+    },
+    {
+        "id": "vocal",
+        "label": "Vocal Artists"
+    },
+    {
+        "id": "live",
+        "label": "Live Projects"
+    },
+    {
+        "id": "dj",
+        "label": "DJs"
+    },
+    {
+        "id": "visual",
+        "label": "Visual Production"
+    }
+]

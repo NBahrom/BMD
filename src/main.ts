@@ -7,14 +7,16 @@ import { createPinia } from 'pinia'
 import { i18n, bootstrap } from './i18n'
 
 
-const app = createApp(App)
+async function start() {
+  const app = createApp(App)
 
-app.use(router)
+  app.use(router)
+  app.use(createPinia())
 
-bootstrap()
+  await bootstrap() 
+  app.use(i18n)
 
-app.use(i18n)
+  app.mount('#app')
+}
 
-app.use(createPinia())
-
-app.mount('#app')
+start()

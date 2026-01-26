@@ -8,7 +8,8 @@
   },
 
   "btns": {
-    "loadMore": "Загрузить ещё"
+    "loadMore": "Загрузить ещё",
+    "submitBtn": "Отправить"
   },
 
   "home": {
@@ -83,5 +84,15 @@
     "contactUs": "Связаться с нами",
     "contactName1": "Марат Бикинеев",
     "contactName2": "Дима Митч"
+  },
+
+  "bookModal": {
+    "title": "Book artist",
+    "description": "Please fill in the form below. Provide as much information as possible about your upcoming event.",
+    "nameInput": "Name",
+    "telNumInput": "Contact number",
+    "messageInput": "Your message",
+    "thankyouTitle": "Thank you!",
+    "thankyouDesc": "Your message has been sent. We’ll be in touch shortly."
   }
 }

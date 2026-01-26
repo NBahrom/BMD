@@ -12,6 +12,9 @@ export default {
         body: ['Inter', 'system-ui', 'sans-serif'],
         heading: ['Playfair Display', 'serif'],
       },
+      spacing: {
+        header: 'var(--header-height)',
+      },
     },
   },
   plugins: [],

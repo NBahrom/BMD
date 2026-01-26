@@ -8,7 +8,8 @@
   },
 
   "btns": {
-    "loadMore": "load more"
+    "loadMore": "load more",
+    "submitBtn": "submit"
   },
 
   "home": {
@@ -84,5 +85,15 @@
     "contactUs": "Contact Us",
     "contactName1": "marat bikineev",
     "contactName2": "dima mitch"
+  },
+
+  "bookModal": {
+    "title": "Book artist",
+    "desc": "Please fill in the form below. Provide as much information as possible about your upcoming event.",
+    "nameInput": "Name",
+    "telNumInput": "Contact number",
+    "messageInput": "Your message",
+    "thankyouTitle": "Thank you!",
+    "thankyouDesc": "Your message has been sent. We’ll be in touch shortly."
   }
 }

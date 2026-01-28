@@ -7,7 +7,8 @@
     import { ref } from 'vue';
     import MobileMenuModal from './MobileMenuModal.vue';
     import { useHeaderHeight } from '@/composables/useHeaderHeight';
-import CloseIcon from './icons/CloseIcon.vue';
+    import CloseIcon from './icons/CloseIcon.vue';
+    import { RouterLink } from 'vue-router';
 
     const headerRef = ref<HTMLElement | null>(null)
 
@@ -28,8 +29,8 @@ import CloseIcon from './icons/CloseIcon.vue';
                     <div class="max-w-144.25 w-full flex items-center justify-end lg:justify-between">
                         <nav class="hidden lg:block">
                             <ul class="flex gap-14.75">
-                                <li class="text-sm uppercase">{{t('nav.artists')}}</li>
-                                <li class="text-sm uppercase">{{t('nav.about')}}</li>
+                                <RouterLink to="/" class="text-sm uppercase">{{t('nav.artists')}}</RouterLink>
+                                <RouterLink to="/about" class="text-sm uppercase">{{t('nav.about')}}</RouterLink>
                             </ul>
                         </nav>
     

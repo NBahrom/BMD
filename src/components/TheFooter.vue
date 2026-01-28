@@ -27,8 +27,16 @@ const { t } = useI18n()
                                 <h6 class="text-sm/[100%] text-[#FFFFFF4D] mb-5">{{ t("nav.nav") }}</h6>
         
                                 <ul class="flex flex-col gap-2.5">
-                                    <li class="text-white text-sm/[100%]">{{ t("nav.artists") }}</li>
-                                    <li class="text-white text-sm/[100%]">{{ t("nav.about") }}</li>
+                                    <li class="text-white text-sm/[100%]">
+                                        <RouterLink to="/">
+                                            {{ t("nav.artists") }}
+                                        </RouterLink>
+                                    </li>
+                                    <li class="text-white text-sm/[100%]">
+                                        <RouterLink to="/about">
+                                            {{ t("nav.about") }}
+                                        </RouterLink>
+                                    </li>
                                     <li class="text-white text-sm/[100%]">{{ t("nav.booking") }}</li>
                                 </ul>
                             </div>
@@ -53,7 +61,7 @@ const { t } = useI18n()
                 <p class="text-[#FFFFFF66] text-sm/[100%]">2026, BMD TALENTS. {{t("footer.rights")}}.</p>
 
                 <div class="flex gap-2.5 flex-col md:flex-row md:gap-6.25">
-                    <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/Privacy"> Privacy Policy </RouterLink>
+                    <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/privacy-policy"> Privacy Policy </RouterLink>
                     <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/Terms"> Terms and Conditions </RouterLink>
                 </div>
             </div>

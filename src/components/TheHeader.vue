@@ -52,5 +52,5 @@
     </div>
 
     <BookArtistModal v-model:open="isOpenBookModal" />
-    <MobileMenuModal v-on:update:open="isOpenBookModal = $event" :open="isOpenMobileModal" />
+    <MobileMenuModal v-on:update:open="isOpenBookModal = $event" v-on:update:close="isOpenMobileModal = $event" :open="isOpenMobileModal" />
 </template>

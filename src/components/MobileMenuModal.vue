@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { toRef  } from 'vue'
+import { toRef, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { RouterLink } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import ContactUsInfo from './ContactUsInfo.vue';
@@ -8,6 +9,7 @@ import { useBodyScrollLock } from '@/composables/useBodyScrollLock';
 
 
 const { t } = useI18n()
+const route = useRoute()
 
 const props = defineProps<{
   open: boolean
@@ -17,8 +19,16 @@ useBodyScrollLock(toRef(props, 'open'))
 
 const emit = defineEmits<{
     (e: 'update:open', value: boolean): void
+    (e: 'update:close', value: boolean): void
 }>()
 
+watch(
+  () => route.fullPath,
+  () => {
+    emit('update:close', false)
+    document.body.style.overflow = "none"
+  }
+)
 </script>
 
 <template>
@@ -30,7 +40,7 @@ const emit = defineEmits<{
                         <RouterLink to="/">{{ t('nav.artists') }}</RouterLink>
                     </li>
                     <li class="text-[22px]/[100%] uppercase">
-                        <RouterLink to="/">{{ t('nav.about') }}</RouterLink>
+                        <RouterLink to="/about">{{ t('nav.about') }}</RouterLink>
                     </li>
                     <li @click="emit('update:open', true)" class="text-[22px]/[100%] uppercase">
                         {{ t('nav.book') }}

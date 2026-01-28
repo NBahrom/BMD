@@ -126,5 +126,38 @@
     "messageInput": "Your message",
     "thankyouTitle": "Thank you!",
     "thankyouDesc": "Your message has been sent. We’ll be in touch shortly."
+  },
+
+
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "content": [
+      {
+        "title": "Last updated: January 3, 2025",
+        "text": [
+          "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information.",
+          "When you make a purchase or otherwise utilize the Site, we may need to provide your information, including the information indicated above, to certain third-party service providers. The categories of third-party service providers we may share with include payment processors, email and SMS marketing providers, social networks, analytics providers, product manufacturers, shipping companies, parties used in the sending of postal mail or emails, accounting and record-keeping parties, security and fraud prevention providers, advertisers, and other web-based services. Your information is disclosed to such third-party service providers only as necessary to complete the transaction for which they have been engaged by us"
+        ]
+      },
+      { 
+        "title": "OPT-OUT POLICY",
+        "text": [
+          "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information."
+        ]
+      },
+      { 
+        "title": "OTHER INFORMATION COLLECTED BY THE SITE",
+        "text": [
+          "The Site automatically collects information as you navigate through the Site. Information collected automatically may include Internet Protocol addresses, details relating to your use of the Site and information collected through cookies and other tracking technologies. This information collected is generally statistical data and does not identify you specifically. We will not re-identify such statistical or de-identified data. This information is used by us to improve the Site and to deliver better service to the Site's users."
+        ]
+      },
+      { 
+        "title": "QUESTIONS AND CONTACT INFORMATION",
+        "text": [
+          "If you would like to: access, correct, amend or delete any personal information we have about you, make changes to your account, register a complaint, or simply want more information, please contact our Privacy Compliance Officer at the following:",
+          "NUTRL Skin LLC <br>15260 Ventura Boulevard <br>Sherman Oaks CA 91403 <br>CS #: 702-425-5164 <br>support@nutrlskin.com"
+        ]
+      }
+    ]
   }
 }

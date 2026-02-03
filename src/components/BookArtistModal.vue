@@ -1,15 +1,37 @@
 <script setup lang="ts">
-import { toRef  } from 'vue'
+import { ref, toRef, watch  } from 'vue'
 import CloseIcon from './icons/CloseIcon.vue';
 import { useI18n } from 'vue-i18n'
 import BaseInput from './ui/BaseInput.vue';
 import { useBodyScrollLock } from '@/composables/useBodyScrollLock';
+import { cn } from '@/lib/cn';
 
 const { t } = useI18n()
+const error = ref(false)
 
 const props = defineProps<{
   open: boolean
 }>()
+
+function onSubmit(e: Event) {
+    e.preventDefault();
+
+    const form = e.target as HTMLFormElement
+    const formData = new FormData(form)
+    const name = formData.get('name')
+    const tel = formData.get('tel')
+    const message = formData.get('message')
+    
+    if(!name || !tel || !message) {
+        error.value = false
+        requestAnimationFrame(() => {
+            error.value = true 
+        })
+        return
+    }
+}
+
+
 
 const emit = defineEmits<{
   (e: 'update:open', value: boolean): void
@@ -32,11 +54,11 @@ useBodyScrollLock(toRef(props, 'open'))
                     <h2 class="text-[32px]/[100%] mb-5 text-center md:text-[40px]/[100%]">{{t("bookModal.title")}}</h2>
                     <p class="text-sm/[130%] mb-7.5 text-center tracking-tighter">{{t("bookModal.desc")}}</p>
     
-                    <form class="flex flex-col gap-2.5">
+                    <form @submit="onSubmit" class="flex flex-col gap-2.5">
                         <BaseInput type="text" name="name" id="name" :placeholder="t('bookModal.nameInput')" />
                         <BaseInput type="tel" name="tel" id="tel" :placeholder="t('bookModal.telNumInput')" />
                         <BaseInput class="h-31.75 md:h-36.5" input-type="textarea" name="message" id="message" :placeholder="t('bookModal.messageInput')"></BaseInput>
-                        <button class="px-13.75 py-5.5 bg-[#181818] text-sm/[100%] text-white uppercase mt-2.5" type="submit">{{ t("btns.submitBtn") }}</button>
+                        <button :class="cn('px-13.75 py-5.5 bg-[#181818] text-sm/[100%] text-white uppercase mt-2.5', error && 'form-error' )" type="submit">{{ t("btns.submitBtn") }}</button>
                     </form>
                 </div>
             </div>

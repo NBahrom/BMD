@@ -3,6 +3,15 @@ import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    // browser back/forward button
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    // always scroll to top on route change
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',

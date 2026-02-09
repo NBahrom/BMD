@@ -40,6 +40,7 @@
     </section>
 
     <AboutSlider />
+    
 
   </main>
 </template>

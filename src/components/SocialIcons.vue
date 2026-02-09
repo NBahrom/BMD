@@ -6,27 +6,29 @@ import InstagramIcon from './icons/InstagramIcon.vue';
 import TelegramIcon from './icons/TelegramIcon.vue';
 import WhatsAppIcon from './icons/WhatsAppIcon.vue';
 import { cn } from '@/lib/cn';
+import SocialIcon from './SocialIcon.vue';
+import SocialIconsWrapper from './SocialIconsWrapper.vue';
 
 const attrs = useAttrs()
 
 </script>
 
 <template>
-         <div :class="cn('flex gap-1', normalizeClass(attrs))">
-            <a class="border border-[#FFFFFF26] rounded-full flex justify-center items-center size-14 lg:size-16.5" href="#!">
+         <SocialIconsWrapper v-bind="attrs">
+            <SocialIcon href="#!">
                 <InstagramIcon />
-            </a>
-            <a class="border border-[#FFFFFF26] rounded-full flex justify-center items-center size-14 lg:size-16.5" href="#!">
+            </SocialIcon>
+            <SocialIcon href="#!">
                 <FacebookIcon />
-            </a>
-            <a class="border border-[#FFFFFF26] rounded-full flex justify-center items-center size-14 lg:size-16.5" href="#!">
+            </SocialIcon>
+            <SocialIcon  href="#!">
                 <WhatsAppIcon />
-            </a>
-            <a class="border border-[#FFFFFF26] rounded-full flex justify-center items-center size-14 lg:size-16.5" href="#!">
+            </SocialIcon>
+            <SocialIcon  href="#!">
                 <TelegramIcon />
-            </a>
-            <a class="border border-[#FFFFFF26] rounded-full flex justify-center items-center size-14 lg:size-16.5" href="#!">
+            </SocialIcon>
+            <SocialIcon  href="#!">
                 <EmailIcon />
-            </a>
-        </div>
+            </SocialIcon>
+        </SocialIconsWrapper>
 </template>

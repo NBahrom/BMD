@@ -20,7 +20,13 @@ const router = createRouter({
     {
       path: '/privacy-policy',
       name: 'privacy policy',
-      component: () => import('../views/PrivacyPolicy.vue'),
+      component: () => import('../views/PrivacyPolicyView.vue'),
+    },
+    {
+      path: '/singers/:id',
+      name: 'singer',
+      component: () => import('../views/SingerView.vue'),
+      props: true
     }
   ],
 })

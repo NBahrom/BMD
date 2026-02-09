@@ -4,69 +4,489 @@
     "nameKey": "singers.emeli.name",
     "categoryIds": ["vocal", "live"],
     "descKey": "singers.emeli.desc",
-    "image": "/images/emeli.jpg"
+    "image": "/images/emeli.jpg",
+    "spotifyLink": "https/spot",
+    "yandexLink": "https/yand",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   },
   {
     "id": "ravshan",
     "nameKey": "singers.ravshan.name",
     "categoryIds": ["dj"],
     "descKey": "singers.ravshan.desc",
-    "image": "/images/ravshannematov.jpg"
+    "image": "/images/ravshannematov.jpg",
+    "spotifyLink": "singers.ravshan.spotify",
+    "yandexLink": "singers.ravshan.yandex",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   },
   {
     "id": "mosaiq8e",
     "nameKey": "singers.mosaiq8e.name",
     "categoryIds": ["visual"],
     "descKey": "singers.mosaiq8e.desc",
-    "image": "/images/mosaiq8e.jpg"
+    "image": "/images/mosaiq8e.jpg",
+    "spotifyLink": "singers.mosaiq8e.spotify",
+    "yandexLink": "singers.mosaiq8e.yandex",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   },
     {
     "id": "madlen",
     "nameKey": "singers.madlen.name",
     "categoryIds": ["live"],
     "descKey": "singers.madlen.desc",
-    "image": "/images/madlen.png"
+    "image": "/images/madlen.png",
+    "spotifyLink": "singers.madlen.spotify",
+    "yandexLink": "singers.madlen.yandex",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   },
   {
     "id": "hansley",
     "nameKey": "singers.hansley.name",
     "categoryIds": ["vocal"],
     "descKey": "singers.hansley.desc",
-    "image": "/images/hansley.png"
+    "image": "/images/hansley.png",
+    "spotifyLink": "singers.hansley.spotify",
+    "yandexLink": "singers.hansley.yandex",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   },
   {
     "id": "alexey",
     "nameKey": "singers.alexey.name",
     "categoryIds": ["vocal", "live"],
     "descKey": "singers.alexey.desc",
-    "image": "/images/alexey.png"
+    "image": "/images/alexey.png",
+    "spotifyLink": "singers.alexey.spotify",
+    "yandexLink": "singers.alexey.yandex",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   },
   {
     "id": "qaraqoom",
     "nameKey": "singers.qaraqoom.name",
     "categoryIds": ["live"],
     "descKey": "singers.qaraqoom.desc",
-    "image": "/images/qaraqoom.png"
+    "image": "/images/qaraqoom.png",
+    "spotifyLink": "singers.qaraqoom.spotify",
+    "yandexLink": "singers.qaraqoom.yandex",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   },
   {
     "id": "mitch",
     "nameKey": "singers.mitch.name",
     "categoryIds": ["vocal"],
     "descKey": "singers.mitch.desc",
-    "image": "/images/mitch.png"
+    "image": "/images/mitch.png",
+    "spotifyLink": "singers.mitch.spotify",
+    "yandexLink": "singers.mitch.yandex",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   },
   {
     "id": "kmrn",
     "nameKey": "singers.kmrn.name",
     "categoryIds": ["dj"],
     "descKey": "singers.kmrn.desc",
-    "image": "/images/kmrn.jpg"
+    "image": "/images/kmrn.jpg",
+    "spotifyLink": "singers.kmrn.spotify",
+    "yandexLink": "singers.kmrn.yandex",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   },
   {
     "id": "kmrn",
     "nameKey": "singers.kmrn.name",
     "categoryIds": ["dj"],
     "descKey": "singers.kmrn.desc",
-    "image": "/images/kmrn.jpg"
+    "image": "/images/kmrn.jpg",
+    "spotifyLink": "singers.kmrn.spotify",
+    "yandexLink": "singers.kmrn.yandex",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      },
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "type": "image",
+        "src": "/images/emeli.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/videos/Preview.mp4"
+      },
+      {
+        "type": "image",
+        "src": "/videos/moviePic.png"
+      }
+    ]
   }
 ]

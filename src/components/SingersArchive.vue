@@ -5,14 +5,7 @@ import singers from '@/data/singers.json'
 import { useI18n } from 'vue-i18n'
 import ArrowRightIcon from './icons/ArrowRightIcon.vue'
 import { RouterLink } from 'vue-router'
-
-interface Singer {
-  id: string
-  nameKey: string
-  descKey: string
-  image: string
-  categoryIds: string[]
-}
+import type { Singer } from '../types'
 
 const { t } = useI18n()
 const categoryStore = useCategoryStore()

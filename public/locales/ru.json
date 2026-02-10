@@ -172,7 +172,9 @@
     "telNumInput": "Contact number",
     "messageInput": "Your message",
     "thankyouTitle": "Thank you!",
-    "thankyouDesc": "Your message has been sent. We’ll be in touch shortly."
+    "errorTitle": "Sorry",
+    "thankyouDesc": "Your message has been sent. We’ll be in touch shortly.",
+    "errorDesc": "There was some issue. please try after sometime"  
   },
 
 

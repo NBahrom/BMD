@@ -11,7 +11,13 @@ export interface Singer {
     link: string
   }[]
   projects: {
-    type: string,
-    src: string
+    coverPhoto: {
+      alt:string,
+      src: string
+    },
+    video: {
+      type: string,
+      src: string
+    } | null
   }[]
 }

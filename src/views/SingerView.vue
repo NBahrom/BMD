@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { ref} from 'vue'
 import NotFound from "@/components/NotFound.vue"
 import SocialIcon from "@/components/SocialIcon.vue"
 import SocialIconsWrapper from "@/components/SocialIconsWrapper.vue"
@@ -11,6 +12,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation } from 'swiper/modules';
 import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue';
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue';
+import PlayIcon from '@/components/icons/PlayIcon.vue';
+import VideoModal from '@/components/VideoModal.vue';
 
 const { t, tm } = useI18n()
 
@@ -20,6 +23,9 @@ const props = defineProps({
 
 const currentSinger = singers.find(singers => singers.id == props.id)
 const textContent = currentSinger && tm(currentSinger.descKey)as Array<string>
+
+const isOpenVideoModal = ref(false)
+
 
 </script>
 
@@ -36,8 +42,8 @@ const textContent = currentSinger && tm(currentSinger.descKey)as Array<string>
                     </div>
                     <div class="flex flex-col my-7.5 md:my-10 gap-2.5">
                         <BaseButton class="lg:max-w-75.25 lg:hidden bg-[#181818] text-white">book artist</BaseButton>
-                        <BaseButton class="lg:max-w-75.25" :href="currentSinger.spotifyLink" :link="true">spotify</BaseButton>
-                        <BaseButton class="lg:max-w-75.25" :href="currentSinger.yandexLink" :link="true">Yandex music</BaseButton>
+                        <BaseButton class="lg:max-w-75.25 lg:hover:bg-[#181818] lg:hover:text-white transition-colors duration-300" :href="currentSinger.spotifyLink" :link="true">spotify</BaseButton>
+                        <BaseButton class="lg:max-w-75.25 lg:hover:bg-[#181818] lg:hover:text-white transition-colors duration-300" :href="currentSinger.yandexLink" :link="true">Yandex music</BaseButton>
                     </div>
 
                     <SocialIconsWrapper>
@@ -69,7 +75,7 @@ const textContent = currentSinger && tm(currentSinger.descKey)as Array<string>
     <div class="mb-17.5 lg:mb-38.75">
         <swiper
             slides-per-view="auto"
-            :space-between="95"
+            :space-between="20"
             :centeredSlides="true"
             :modules="[Navigation]"
             :navigation="{
@@ -81,19 +87,21 @@ const textContent = currentSinger && tm(currentSinger.descKey)as Array<string>
                     spaceBetween: 10
                 },
                 768: {
-                    spaceBetween: 20
+                    spaceBetween: 10
                 },
                 1024: {
-                    spaceBetween: 95
+                    spaceBetween: 20
                 }
             }"            
             class="projects-swiper"
         >
             <swiper-slide v-for="(prj, index) in currentSinger?.projects" :key="index" >
-                <img v-if="prj.type === 'image'" class="w-full h-full object-cover" :src="prj.src" :alt="prj.type">
-                <video v-else controls class="w-full h-full object-cover" :src="prj.src">
-                    <source :src="prj.src" :type="`video/${prj.type}`">
-                </video>
+                <img class="w-full h-full object-cover" :src="prj.coverPhoto.src" :alt="prj.coverPhoto.alt">
+
+                <div v-if="prj.video" @click="isOpenVideoModal = true" class="play-icon -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full absolute left-1/2 top-1/2 p-3.25 md:p-5.5">
+                    <PlayIcon class="size-4.75" />
+                </div>
+                <VideoModal v-if="prj.video" v-model:open="isOpenVideoModal" :video-src="prj.video.src" :video-type="prj.video.type"  />
             </swiper-slide>
         </swiper>
     
@@ -109,42 +117,66 @@ const textContent = currentSinger && tm(currentSinger.descKey)as Array<string>
 <style>
 .projects-swiper .swiper-slide.swiper-slide-active {
     transition: all 0.3s ease;
-    transform: scale(1.18,1.38);
+    width: 834px;
+    height: 487px;
     opacity: 1;
 }
+
+
+.projects-swiper .swiper-wrapper{
+    min-height: 487px;
+    align-items: center;
+    margin-left: -195px;
+}
+
 
 .projects-swiper .swiper-slide {
     transition: all 0.3s ease;
     height: 354px;
-    width: 834px;
-    margin-top: 66px;
-    margin-bottom: 66px;
+    width: 439px;
     opacity: 0.5;
+}
+
+.projects-swiper .swiper-slide.swiper-slide-active:hover .play-icon{
+    transform: scale(1.2);
+}
+
+.projects-swiper .play-icon{
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+.projects-swiper .swiper-slide.swiper-slide-active .play-icon{
+    transform: scale(1);
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 1024px) {
     .projects-swiper .swiper-slide.swiper-slide-active {
-        transform: scale(1,1.55);
+        width: 648px;
+        height: 378px;
     }
 
     .projects-swiper .swiper-slide {
-        height: 244px;
-        margin-top: 67.2px;
-        margin-bottom: 67.2px;
-        width: 648px;
+        height: 302px;
+        width: 244px;
     }
 }
 
 @media (max-width: 767px) {
     .projects-swiper .swiper-slide.swiper-slide-active {
-        transform: scale(1, 1.423);
+        width: 305px;
+        height: 219px;
+    }
+
+    .projects-swiper .swiper-wrapper{
+        min-height: 219px;
+        margin-left: -60px;
     }
 
     .projects-swiper .swiper-slide {
+        width: 191px;
         height: 154px;
-        margin-top: 32.5px;
-        margin-bottom: 32.5px;
-        width: 305px;
     }
 }
 </style>

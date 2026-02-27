@@ -60,10 +60,6 @@ async function onSubmit(e: Event) {
 
 }
 
-
-
-
-
 const emit = defineEmits<{
   (e: 'update:open', value: boolean): void
 }>()
@@ -101,7 +97,7 @@ watch(
                         <BaseInput type="tel" name="tel" id="tel" :placeholder="t('bookModal.telNumInput')" />
                         <BaseInput class="h-31.75 md:h-36.5" input-type="textarea" name="message" id="message" :placeholder="t('bookModal.messageInput')"></BaseInput>
                         <button 
-                            :class="cn('px-13.75 py-5.5 flex justify-center items-center bg-[#181818] text-sm/[100%] text-white uppercase mt-2.5 opacity-100!', error && 'form-error' )" 
+                            :class="cn('px-13.75 py-5.5 flex justify-center items-center bg-[#181818] text-sm/[100%] text-white uppercase mt-2.5 opacity-100! w-full md:w-fit md:mx-auto', error && 'form-error' )" 
                             type="submit"
                             :disabled="isLoading"
                         >

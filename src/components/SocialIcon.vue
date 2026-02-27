@@ -44,8 +44,8 @@ const icon = computed(() => {
     <a 
         v-bind="attrs" 
         :class="cn(
-            'border border-[#FFFFFF26] rounded-full flex justify-center items-center min-w-14 size-14 lg:size-16.5',
-            mode == 'white' && '[&_path]:fill-[#181818] border-[#1818181A]', 
+            'border border-[#FFFFFF26] rounded-full flex justify-center items-center min-w-14 size-14 transition-colors duration-300 lg:hover:bg-[#ffffff4a]  lg:hover:border-transparent lg:size-16.5',
+            mode == 'white' && '[&_path]:fill-[#181818] border-[#1818181A] lg:hover:bg-[#EFEFEF]', 
             normalizeClass(attrs['class'])
         )"
     >

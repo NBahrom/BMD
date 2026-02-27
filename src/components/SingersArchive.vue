@@ -6,12 +6,14 @@ import { useI18n } from 'vue-i18n'
 import ArrowRightIcon from './icons/ArrowRightIcon.vue'
 import { RouterLink } from 'vue-router'
 import type { Singer } from '../types'
+import Spinner from './icons/Spinner.vue'
 
 const { t } = useI18n()
 const categoryStore = useCategoryStore()
 
 const ITEMS_PER_PAGE = 9
 const visibleCount = ref(ITEMS_PER_PAGE)
+const isLoading = ref(false)
 
 // Reset pagination when category changes
 watch(
@@ -45,9 +47,15 @@ const canLoadMore = computed(() => {
 
 //Load more action
 function loadMore() {
-  visibleCount.value += ITEMS_PER_PAGE
-}
+  if (isLoading.value) return
 
+  isLoading.value = true
+
+  setTimeout(() => {
+    visibleCount.value += ITEMS_PER_PAGE
+    isLoading.value = false
+  }, 1000)
+}
 </script>
 
 <template>
@@ -67,13 +75,13 @@ function loadMore() {
                     </span>
                 </div>
     
-                <div class="w-full h-92.5 md:h-101.5 lg:h-124.25">
+                <RouterLink :to="'/singers/' + singer.id" class="w-full h-92.5 md:h-101.5 lg:h-124.25">
                     <img class="w-full h-full object-cover" :src="singer.image" :alt="t(singer.nameKey)">
-                </div>
+                </RouterLink>
                 
-                <RouterLink :to="'/singers/' + singer.id" class="flex gap-3 items-center">
+                <RouterLink :to="'/singers/' + singer.id" class="flex gap-3 items-center hover:[&_svg]:ml-2">
                     <h4 class="text-[18px] md:text-[22px] uppercase">{{ t(singer.nameKey) }}</h4>
-                    <ArrowRightIcon />
+                    <ArrowRightIcon class="transition-all duration-300" />
                 </RouterLink>
             </div>
         </div>
@@ -81,9 +89,12 @@ function loadMore() {
         <button 
             v-if="canLoadMore"
             @click="loadMore"
-            class="mx-auto px-8 py-5.5 bg-[#181818] block  text-white uppercase text-sm mt-11.25 sm:mt-12.5 lg:mt-15"
-        >
-            {{ t("btns.loadMore") }}
+            class="mx-auto px-7.25 py-5.5 relative bg-[#181818] block cursor-pointer  text-white uppercase text-sm/[100%] mt-11.25 sm:mt-12.5 lg:mt-15"
+        >   
+          <div v-if="isLoading" class="absolute left-0 top-0 w-full h-full bg-[#181818] flex justify-center items-center">
+            <Spinner class="size-4" />
+          </div>
+          {{ t("btns.loadMore") }}
         </button>
     </div>
 </template>

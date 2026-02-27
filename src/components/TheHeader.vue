@@ -35,10 +35,10 @@
                         </nav>
     
                         <div class="flex gap-5 md:gap-11.75 items-center lg:gap-15">
-                            <button v-if="locale === 'en'" @click="loadLocale('ru')" class="px-2.25 cursor-pointer text-sm opacity-50 border-0 bg-transparent">РУС</button> 
-                            <button v-else @click="loadLocale('en')" class="px-2.25 cursor-pointer text-sm opacity-50 border-0 bg-transparent">ENG</button>    
+                            <button v-if="locale === 'en'" @click="loadLocale('ru')" class="px-2.25 cursor-pointer text-sm opacity-50 border-0 bg-transparent">RU</button> 
+                            <button v-else @click="loadLocale('en')" class="px-2.25 cursor-pointer text-sm opacity-50 border-0 bg-transparent">EN</button>    
                             
-                            <button @click="isOpenBookModal = true" class="px-8 py-5.5 cursor-pointer bg-[#181818] text-white uppercase hidden lg:block">{{t('nav.book')}}</button>
+                            <button @click="isOpenBookModal = true" class="px-8 py-5.5 cursor-pointer bg-[#181818] text-white text-[13px]/[100%] uppercase hidden lg:block">{{t('nav.book')}}</button>
                             
                             <button @click="isOpenMobileModal = !isOpenMobileModal" class="size-14.5 flex justify-center items-center bg-[#181818] rounded-full lg:hidden" >
                                 <BurgerMenu v-if="isOpenMobileModal == false" />

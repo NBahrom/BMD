@@ -35,16 +35,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   },
@@ -84,16 +96,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   },
@@ -133,16 +157,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   },
@@ -182,16 +218,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   },
@@ -231,16 +279,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   },
@@ -280,16 +340,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   },
@@ -329,16 +401,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   },
@@ -378,16 +462,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   },
@@ -427,16 +523,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   },
@@ -476,16 +584,28 @@
     ],
     "projects": [
       {
-        "type": "image",
-        "src": "/videos/moviePic2.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic2.png"
+        },
+        "video": null
       },
       {
-        "type": "mp4",
-        "src": "/videos/Preview.mp4"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": {
+          "type": "mp4",
+          "src": "/videos/Preview.mp4"
+        }
       },
       {
-        "type": "image",
-        "src": "/videos/moviePic.png"
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/moviePic.png"
+        },
+        "video": null
       }
     ]
   }

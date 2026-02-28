@@ -14,6 +14,7 @@ import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue';
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue';
 import PlayIcon from '@/components/icons/PlayIcon.vue';
 import VideoModal from '@/components/VideoModal.vue';
+import type { Singer } from '../types'
 
 const { t, tm } = useI18n()
 
@@ -21,7 +22,7 @@ const props = defineProps({
     id: String,
 })
 
-const currentSinger = singers.find(singers => singers.id == props.id)
+const currentSinger : Singer | undefined = singers.find(singers => singers.id == props.id) 
 const textContent = currentSinger && tm(currentSinger.descKey)as Array<string>
 
 const isOpenVideoModal = ref(false)
@@ -101,7 +102,7 @@ const isOpenVideoModal = ref(false)
                 <div v-if="prj.video" @click="isOpenVideoModal = true" class="play-icon -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full absolute left-1/2 top-1/2 p-3.25 md:p-5.5">
                     <PlayIcon class="size-4.75" />
                 </div>
-                <VideoModal v-if="prj.video" v-model:open="isOpenVideoModal" :video-src="prj.video.src" :video-type="prj.video.type"  />
+                <VideoModal v-if="prj.video != null" v-model:open="isOpenVideoModal" :video-src="prj.video.src" :video-type="prj.video.type"  />
             </swiper-slide>
         </swiper>
     

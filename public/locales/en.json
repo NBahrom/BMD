@@ -1,4 +1,9 @@
 {
+
+  "meta": {
+    "homeTitle": "BMD Talent Agency. Curatorial artist agency uniting the best musicians and DJs of Uzbekistan"
+  },
+
   "nav": {
     "artists": "Artists",
     "about": "About",
@@ -61,8 +66,8 @@
   },
 
   "singers": {
-    "emeli": {
-      "name": "Emeli",
+    "emily": {
+      "name": "Emily",
       "desc": [
         "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
         "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
@@ -71,8 +76,8 @@
       ]
     },
 
-    "ravshan": {
-      "name": "Ravshan Nematov",
+    "djkarry": {
+      "name": "DJ Karry",
       "desc": [
         "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
         "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
@@ -101,8 +106,8 @@
       ]
     },
 
-    "hansley": {
-      "name": "Hansley",
+    "eya": {
+      "name": "Eya",
       "desc": [
         "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
         "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
@@ -111,8 +116,8 @@
       ]
     },
 
-    "alexey": {
-      "name": "Alexey",
+    "mone": {
+      "name": "Mone",
       "desc": [
         "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
         "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
@@ -149,6 +154,56 @@
         "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
+    },
+
+    "pogosyan": {
+      "name": "Сергей Погосян",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+
+    "proof": {
+      "name": "Proof",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+
+    "ray": {
+      "name": "Ray",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+
+    "roxy": {
+      "name": "Roxy",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+
+    "silkband": {
+      "name": "Silk band",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
     }
   },
 
@@ -161,7 +216,7 @@
 
   "contact": {
     "adress": "Address",
-    "adressText": "C/ de Bailèn, 129, L’Eixample, 08037 Barcelona",
+    "adressText": "COMMUNITY <br>TARAS SHEVCHENKO, 24 <br>Tashkent, uzbekistan",
     "contactUs": "Contact Us",
     "contactName1": "marat bikineev",
     "contactName2": "dima mitch"

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { i18n } from '@/i18n'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,9 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: {
+        titleKey: 'meta.homeTitle'
+      }
     },
     {
       path: '/about',
@@ -38,6 +42,17 @@ const router = createRouter({
       props: true
     }
   ],
+})
+
+router.afterEach((to) => {
+  const titleKey = to.meta.titleKey as string
+  if (titleKey) {
+    document.title = i18n.global.t(titleKey)
+  }
+
+  if (typeof window !== 'undefined' && (window as any).ym) {
+    ;(window as any).ym(107036842, 'hit', to.fullPath)
+  }
 })
 
 export default router

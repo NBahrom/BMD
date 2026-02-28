@@ -2,7 +2,10 @@
 import ContactUsInfo from './ContactUsInfo.vue';
 import Logo from './Logo.vue';
 import { useI18n } from 'vue-i18n'
-import SocialIcons from './SocialIcons.vue';
+import { ref } from 'vue';
+import BookArtistModal from './BookArtistModal.vue';
+// import SocialIcons from './SocialIcons.vue';
+const isOpenBookModal = ref(false)
 
 const { t } = useI18n()
 </script>
@@ -18,7 +21,7 @@ const { t } = useI18n()
                             <p class="text-sm/[120%] text-white opacity-30">{{ t("footer.aboutText") }}</p>
                         </div>
     
-                        <SocialIcons />
+                        <!-- <SocialIcons /> -->
                     </div>
     
                     <div class="hidden flex-col gap-16.25 md:flex">
@@ -37,14 +40,14 @@ const { t } = useI18n()
                                             {{ t("nav.about") }}
                                         </RouterLink>
                                     </li>
-                                    <li class="text-white text-sm/[100%]">{{ t("nav.booking") }}</li>
+                                    <li @click="isOpenBookModal = true" class="text-white text-sm/[100%] cursor-pointer">{{ t("nav.booking") }}</li>
                                 </ul>
                             </div>
         
                             <div class="w-fit lg:w-86.5">
-                                <h6 class="text-sm/[100%] text-[#FFFFFF4D] mb-5">{{ t("contact.adress") }}</h6>
+                                <h6  class="text-sm/[100%] text-[#FFFFFF4D] mb-5">{{ t("contact.adress") }}</h6>
         
-                                <p class="text-white text-sm max-w-54.25">{{ t("contact.adressText") }}</p>
+                                <p class="text-white text-sm max-w-54.25" v-html="t('contact.adressText')"/>
         
                             </div>
                         </div>
@@ -67,4 +70,6 @@ const { t } = useI18n()
             </div>
         </div>
     </footer>
+
+    <BookArtistModal v-model:open="isOpenBookModal" />
 </template>

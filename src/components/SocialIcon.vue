@@ -7,6 +7,7 @@ import TelegramIcon from './icons/TelegramIcon.vue';
 import WhatsAppIcon from './icons/WhatsAppIcon.vue';
 import TiktokIcon from './icons/TiktokIcon.vue';
 import YoutubeIcon from './icons/YoutubeIcon.vue';
+import LinkIcon from './icons/LinkIcon.vue';
 import { cn } from '@/lib/cn';
 
 const props = defineProps<{
@@ -32,6 +33,8 @@ const icon = computed(() => {
       return TiktokIcon
     case 'youtube':
       return YoutubeIcon
+    case 'link':
+      return LinkIcon
     default:
       return null
   }

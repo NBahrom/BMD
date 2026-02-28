@@ -16,11 +16,15 @@ export async function loadLocale(locale: Locale) {
   if (!i18n.global.availableLocales.includes(locale)) {
     const response = await fetch(`/locales/${locale}.json`)
     const messages = await response.json()
-
+    
     i18n.global.setLocaleMessage(locale, messages)
   }
 
   i18n.global.locale.value = locale
+
+  if (i18n.global.te('meta.homeTitle')) {
+    document.title = i18n.global.t('meta.homeTitle')
+  }
 }
 
 export async function bootstrap() {

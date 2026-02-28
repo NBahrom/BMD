@@ -116,6 +116,10 @@ const isOpenVideoModal = ref(false)
 
 
 <style>
+
+.projects-swiper{
+    width: 100%;
+}
 .projects-swiper .swiper-slide.swiper-slide-active {
     transition: all 0.3s ease;
     width: 834px;

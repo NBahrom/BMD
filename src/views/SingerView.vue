@@ -76,7 +76,7 @@ const isOpenVideoModal = ref(false)
     <div class="mb-17.5 lg:mb-38.75">
         <swiper
             slides-per-view="auto"
-            :space-between="-180"
+            :space-between="20"
             :centeredSlides="true"
             :modules="[Navigation]"
             :navigation="{
@@ -91,7 +91,7 @@ const isOpenVideoModal = ref(false)
                     spaceBetween: 10
                 },
                 1024: {
-                    spaceBetween: -180
+                    spaceBetween: 20
                 }
             }"            
             class="projects-swiper"
@@ -120,41 +120,27 @@ const isOpenVideoModal = ref(false)
 .projects-swiper{
     width: 100%;
 }
-
-.projects-swiper .swiper-slide {
-    width: 834px;
-    transform: scale(0.52, 0.73);
-    height: 487px;
-    opacity: 0.5;
-    transition: all 0.3s ease;
-}
-
 .projects-swiper .swiper-slide.swiper-slide-active {
-    transform: scale(1);
-    opacity: 1;
-    transition: all 0.3s ease;
-}
-
-/* .projects-swiper .swiper-slide.swiper-slide-active {
     transition: all 0.3s ease;
     width: 834px;
-   
+    height: 487px;
     opacity: 1;
-} */
+}
 
 
 .projects-swiper .swiper-wrapper{
     min-height: 487px;
     align-items: center;
+    margin-left: -195px;
 }
 
-/* 
+
 .projects-swiper .swiper-slide {
     transition: all 0.3s ease;
     height: 354px;
     width: 439px;
     opacity: 0.5;
-} */
+}
 
 .projects-swiper .swiper-slide.swiper-slide-active:hover .play-icon{
     transform: scale(1.2);

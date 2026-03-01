@@ -147,7 +147,7 @@ const isOpenVideoModal = ref(false)
 .projects-swiper .swiper-wrapper{
     min-height: 487px;
     align-items: center;
-    margin-left: -195px;
+    margin-left: 0;
 }
 
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { ref} from 'vue'
+import { ref, nextTick } from 'vue'
 import NotFound from "@/components/NotFound.vue"
 import SocialIcon from "@/components/SocialIcon.vue"
 import SocialIconsWrapper from "@/components/SocialIconsWrapper.vue"
@@ -15,12 +15,27 @@ import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue';
 import PlayIcon from '@/components/icons/PlayIcon.vue';
 import VideoModal from '@/components/VideoModal.vue';
 import type { Singer } from '../types'
+import type { Swiper as SwiperType } from 'swiper'
 
 const { t, tm } = useI18n()
 
 const props = defineProps({
     id: String,
 })
+
+const swiperRef = ref<SwiperType | null>(null)
+
+const onSwiper = async (swiper: SwiperType) => {
+  swiperRef.value = swiper
+
+await nextTick()
+
+  swiperRef.value?.update()
+  swiperRef.value?.updateSlides()
+  swiperRef.value?.updateProgress()
+  swiperRef.value?.updateSlidesClasses()
+}
+
 
 const currentSinger : Singer | undefined = singers.find(singers => singers.id == props.id) 
 const textContent = currentSinger && tm(currentSinger.descKey)as Array<string>
@@ -75,6 +90,7 @@ const isOpenVideoModal = ref(false)
 
     <div class="mb-17.5 lg:mb-38.75">
         <swiper
+            @swiper="onSwiper"
             slides-per-view="auto"
             :space-between="20"
             :centeredSlides="true"

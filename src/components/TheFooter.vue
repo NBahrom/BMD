@@ -61,7 +61,7 @@ const { t } = useI18n()
             </div>
 
             <div class="mt-10 flex flex-col gap-5 md:mt-7.5 md:flex-row md:justify-between lg:justify-start lg:gap-14.5  lg:mt-10">
-                <p class="text-[#FFFFFF66] text-sm/[100%]">2026, Showtime Agency. {{t("footer.rights")}}.</p>
+                <p class="text-[#FFFFFF66] text-sm/[100%]">2026, Showtime. {{t("footer.rights")}}.</p>
 
                 <div class="flex gap-2.5 flex-col md:flex-row md:gap-6.25">
                     <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/privacy-policy"> Privacy Policy </RouterLink>

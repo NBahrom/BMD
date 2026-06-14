@@ -1,47 +1,44 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n'
-  import maratImg from "@/assets/images/marat.png"
-  import dimaImg from "@/assets/images/dima.png"
-  import AboutSlider from '@/components/AboutSlider.vue';
+  import AboutFounders from '@/components/AboutFounders.vue'
+  import AboutAdvantages from '@/components/AboutAdvantages.vue'
+  import AboutPartners from '@/components/AboutPartners.vue'
+  import AboutEvents from '@/components/AboutEvents.vue'
+
   const { t } = useI18n()
 </script>
 
 <template>
-  <main>
-    <section class=" mb-13.75 mt-5 md:mb-17.5 lg:mb-43.75 lg:mt-18.75">
+  <main class="bg-[#f8f8f5]">
+    <!-- Hero -->
+    <section class="pb-12.5 pt-5 md:py-15 lg:py-30">
       <div class="container">
-          <div class="flex flex-col justify-center items-center mb-12.5 md:mb-15">
-              <h1 class="text-start w-full text-[32px]/[100%] mb-5 md:text-center md:mb-10 md:text-[45px] lg:text-[70px]">{{ t("about.title") }}</h1>
-              <p v-html="t('about.desc')" class="[&_b]:text-[#181818] [&_b]:font-normal text-start italic font-heading text-[#18181880] max-w-212 text-[20px]/[140%] md:text-[24px]/[140%] md:text-center" />
-          </div>
-
-          <div class="flex flex-col md:justify-center md:flex-row gap-10 md:gap-5.5">
-            <div class="flex flex-col gap-5 w-full max-w-101.75 md:gap-8">
-              <img class="w-full object-cover h-95 md:h-110 lg:h-124.25" :src="maratImg" alt="image of marat">
-
-              <div class="flex flex-col">
-                <h2 class="uppercase font-medium font-body text-[22px]/[100%] mb-4">{{t('contact.contactName1')}}</h2>
-                <a class="text-[14px]/[100%] mb-2.5" href="tel:+998 90 335 01 06">+998 90 335 01 06</a>
-                <a class="text-[14px]/[100%] opacity-50" href="mailto:marat@bmdtalents.com">marat@bmdtalents.com</a>
-              </div>
-            </div>
-
-            <div class="flex flex-col gap-5 w-full max-w-101.75 md:gap-8">
-              <img class="w-full object-cover h-95 md:h-110 lg:h-124.25" :src="dimaImg" alt="image of marat">
-
-              <div class="flex flex-col">
-                <h2 class="uppercase font-medium font-body text-[22px]/[100%] mb-4">{{t('contact.contactName2')}}</h2>
-                <a class="text-[14px]/[100%] mb-2.5" href="tel:+380 505 48 67 10">+380 505 48 67 10</a>
-                <a class="text-[14px]/[100%] opacity-50" href="mailto:mitch@bmdtalents.com">mitch@bmdtalents.com</a>
-              </div>
-            </div>
-          </div>
+        <div class="mx-auto flex max-w-242.5 flex-col items-start gap-6 text-left md:items-center md:text-center lg:gap-10">
+          <h1 class="text-[40px]/[100%] tracking-tight md:text-[45px]/[100%] lg:text-[70px]/[100%] lg:tracking-[-4.2px]">
+            {{ t('about.title') }}
+          </h1>
+          <p
+            v-html="t('about.desc')"
+            class="font-heading text-[20px]/[1.4] italic text-[#18181880] [&_b]:font-bold [&_b]:text-[#181818] md:text-[24px]/[1.4]"
+          />
+        </div>
       </div>
     </section>
 
-    <AboutSlider />
-    
+    <!-- Founders (swipeable slider on tablet / mobile) -->
+    <AboutFounders />
 
+    <!-- Advantages + partners (white block) -->
+    <section class="bg-white py-15 overflow-hidden md:py-20 lg:py-30">
+      <div class="container">
+        <AboutAdvantages />
+        <div class="mt-7.5 md:mt-17.5 lg:mt-25">
+          <AboutPartners />
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Events -->
+    <AboutEvents />
   </main>
 </template>
-

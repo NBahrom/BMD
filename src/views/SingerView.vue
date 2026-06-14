@@ -1,19 +1,11 @@
 <script setup lang="ts">
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { ref, onMounted } from 'vue'
 import NotFound from "@/components/NotFound.vue"
 import SocialIcon from "@/components/SocialIcon.vue"
 import SocialIconsWrapper from "@/components/SocialIconsWrapper.vue"
 import BaseButton from "@/components/ui/BaseButton.vue"
-import singers from "@/data/singers.json"    
+import ProjectsSlider from "@/components/ProjectsSlider.vue"
+import singers from "@/data/singers.json"
 import { useI18n } from 'vue-i18n'
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Navigation } from 'swiper/modules';
-import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue';
-import ArrowRightIcon from '@/components/icons/ArrowRightIcon.vue';
-import PlayIcon from '@/components/icons/PlayIcon.vue';
-import VideoModal from '@/components/VideoModal.vue';
 import type { Singer } from '../types'
 
 const { t, tm } = useI18n()
@@ -22,22 +14,8 @@ const props = defineProps({
     id: String,
 })
 
-const currentSinger : Singer | undefined = singers.find(singers => singers.id == props.id) 
+const currentSinger : Singer | undefined = singers.find(singers => singers.id == props.id)
 const textContent = currentSinger && tm(currentSinger.descKey)as Array<string>
-
-const isOpenVideoModal = ref(false)
-
-const spaceBetween = ref(0)
-
-onMounted(() => {
-    if(window.innerWidth < 767){
-        spaceBetween.value = window.innerWidth * 0.09 // 5%
-    }else if(window.innerWidth < 1024){
-        spaceBetween.value = window.innerWidth * 0.08 // 5%
-    }else{
-        spaceBetween.value = window.innerWidth * 0.06 // 5%
-    }
-})
 </script>
 
 <template>
@@ -83,108 +61,6 @@ onMounted(() => {
     </section>
     <NotFound v-if="!currentSinger" />
 
-    <div class="mb-17.5 overflow-hidden lg:mb-38.75">
-        <swiper
-            :slides-per-view="2"
-            :space-between="spaceBetween"
-            :centeredSlides="true"
-            :modules="[Navigation]"
-            :navigation="{
-                prevEl: '.project-swiper-prev',
-                nextEl: '.project-swiper-next'
-            }"
-            :breakpoints="{
-                0: {
-                    slidesPerView: 1.4,
-                    spaceBetween: '40px'
-                },
-                768: {
-                    slidesPerView: 1.5
-                },
-                1024:{
-                    slidesPerView: 2
-                }
-            }"
-                    
-            class="projects-swiper"
-        >
-            <swiper-slide v-for="(prj, index) in currentSinger?.projects" :key="index" >
-                <img class="w-full h-full object-cover" :src="prj.coverPhoto.src" :alt="prj.coverPhoto.alt">
-
-                <div v-if="prj.video" @click="isOpenVideoModal = true" class="play-icon -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full absolute left-1/2 top-1/2 p-3.25 md:p-5.5">
-                    <PlayIcon class="size-4.75" />
-                </div>
-                <VideoModal v-if="prj.video != null" v-model:open="isOpenVideoModal" :video-src="prj.video.src" :video-type="prj.video.type"  />
-            </swiper-slide>
-        </swiper>
-    
-        <div class="gap-10 hidden justify-center items-center mt-7.5 lg:flex">
-            <ArrowLeftIcon class="project-swiper-prev cursor-pointer" />
-            <ArrowRightIcon class="project-swiper-next cursor-pointer" />
-        </div>
-    </div>
+    <ProjectsSlider v-if="currentSinger" :projects="currentSinger.projects" />
 
 </template>
-
-
-<style>
-
-.projects-swiper{
-    width: 100%;
-    overflow: visible;
-}
-/* .projects-swiper .swiper-slide.swiper-slide-active {
-    transition: all 0.3s ease;
-    width: 834px;
-    height: 487px;
-    opacity: 1;
-} */
-
-
-.projects-swiper .swiper-slide {
-  transform: scale(1);
-  transition: transform 0.3s ease;
-    opacity: 0.5;
-}
-
-.projects-swiper .swiper-slide.swiper-slide-active {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-
-.projects-swiper .swiper-wrapper{
-    padding: 3% 0;
-    align-items: center;
-}
-
-
-/* .projects-swiper .swiper-slide {
-    transition: all 0.3s ease;
-    height: 354px;
-    width: 439px;
-    opacity: 0.5;
-} */
-
-.projects-swiper .swiper-slide.swiper-slide-active:hover .play-icon{
-    transform: scale(1.2);
-}
-
-.projects-swiper .play-icon{
-    transform: scale(0.8);
-    transition: all 0.3s ease;
-}
-
-.projects-swiper .swiper-slide.swiper-slide-active .play-icon{
-    transform: scale(1);
-    transition: all 0.3s ease;
-}
-
-@media (max-width:767px) {
-    .projects-swiper .swiper-slide {
-        height: 183px;
-    }
-
-}
-
-</style>

@@ -2,10 +2,11 @@
 import ContactUsInfo from './ContactUsInfo.vue';
 import Logo from './Logo.vue';
 import { useI18n } from 'vue-i18n'
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import BookArtistModal from './BookArtistModal.vue';
 // import SocialIcons from './SocialIcons.vue';
 const isOpenBookModal = ref(false)
+const currentYear = new Date().getFullYear();
 
 const { t } = useI18n()
 </script>
@@ -40,6 +41,11 @@ const { t } = useI18n()
                                             {{ t("nav.about") }}
                                         </RouterLink>
                                     </li>
+                                    <li class="text-white text-sm/[100%]">
+                                        <RouterLink to="/about#events">
+                                            {{ t("nav.events") }}
+                                        </RouterLink>
+                                    </li>
                                     <li @click="isOpenBookModal = true" class="text-white text-sm/[100%] cursor-pointer">{{ t("nav.booking") }}</li>
                                 </ul>
                             </div>
@@ -61,7 +67,7 @@ const { t } = useI18n()
             </div>
 
             <div class="mt-10 flex flex-col gap-5 md:mt-7.5 md:flex-row md:justify-between lg:justify-start lg:gap-14.5  lg:mt-10">
-                <p class="text-[#FFFFFF66] text-sm/[100%]">2026, Showtime. {{t("footer.rights")}}.</p>
+                <p class="text-[#FFFFFF66] text-sm/[100%]">{{currentYear}}, The Show Time. {{t("footer.rights")}}.</p>
 
                 <div class="flex gap-2.5 flex-col md:flex-row md:gap-6.25">
                     <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/privacy-policy"> Privacy Policy </RouterLink>

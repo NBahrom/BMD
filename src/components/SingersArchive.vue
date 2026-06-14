@@ -62,9 +62,10 @@ function loadMore() {
     <div class="mb-16.25 md:mb-17.5 lg:mb-30">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-7.5 md:gap-y-10 lg:gap-y-15">
             <div  
-                v-for="singer in visibleSingers"
-                :key="singer.id"
-                class="w-full flex flex-col gap-3 relative"
+                v-for="(singer, index) in visibleSingers"
+                :key="categoryStore.currentCategory + '-' + singer.id"
+                :style="{ animationDelay: index * 0.10 + 's' }"
+                class="card-in w-full flex flex-col gap-3 relative hover:[&_svg]:ml-2"
             >   
                 <div class="flex gap-2 absolute top-6.5 left-6.5">
                     <span
@@ -79,7 +80,7 @@ function loadMore() {
                     <img class="w-full h-full object-cover" :src="singer.image" :alt="t(singer.nameKey)">
                 </RouterLink>
                 
-                <RouterLink :to="'/singers/' + singer.id" class="flex gap-3 items-center hover:[&_svg]:ml-2">
+                <RouterLink :to="'/singers/' + singer.id" class="flex gap-3 items-center ">
                     <h4 class="text-[18px] md:text-[22px] uppercase">{{ t(singer.nameKey) }}</h4>
                     <ArrowRightIcon class="transition-all duration-300" />
                 </RouterLink>
@@ -98,3 +99,26 @@ function loadMore() {
         </button>
     </div>
 </template>
+
+<style scoped>
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-in {
+  animation: card-in 0.5s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-in {
+    animation: none;
+  }
+}
+</style>

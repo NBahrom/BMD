@@ -8,5 +8,5 @@
 </script>
 
 <template>
-    <RouterLink to="/" :class="cn('min-w-max font-bold text-[20px]/[100%] md:text-[22px]/[100%]', color )">SHOWTIME</RouterLink>
+    <RouterLink to="/" :class="cn('min-w-max font-bold text-[20px]/[100%] md:text-[22px]/[100%]', color )">The Show Time</RouterLink>
 </template>

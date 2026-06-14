@@ -42,6 +42,9 @@ watch(
                     <li class="text-[22px]/[100%] uppercase">
                         <RouterLink to="/about">{{ t('nav.about') }}</RouterLink>
                     </li>
+                    <li class="text-[22px]/[100%] uppercase">
+                        <RouterLink to="/about#events">{{ t('nav.events') }}</RouterLink>
+                    </li>
                     <li @click="emit('update:open', true)" class="text-[22px]/[100%] uppercase">
                         {{ t('nav.book') }}
                     </li>

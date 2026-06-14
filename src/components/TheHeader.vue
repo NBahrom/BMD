@@ -4,16 +4,21 @@
     import { loadLocale } from '@/i18n'
     import BurgerMenu from './icons/BurgerMenu.vue';
     import BookArtistModal from './BookArtistModal.vue';
-    import { ref } from 'vue';
+    import { ref, computed } from 'vue';
     import MobileMenuModal from './MobileMenuModal.vue';
     import { useHeaderHeight } from '@/composables/useHeaderHeight';
     import CloseIcon from './icons/CloseIcon.vue';
     import { RouterLink } from 'vue-router';
+    import { useRoute } from 'vue-router'
+    import { cn } from '@/lib/cn.ts';
 
+    const route = useRoute()
+    const isAboutPage = computed(() => route.path === '/about')
+  
     const headerRef = ref<HTMLElement | null>(null)
 
     useHeaderHeight(headerRef)
-
+    
     const isOpenBookModal = ref(false)
     const isOpenMobileModal = ref(false)
     const { locale, t } = useI18n()
@@ -21,7 +26,7 @@
 
 <template>
     <div :style="{ height: 'var(--header-height)' }">
-        <header ref="headerRef" class="py-10 fixed left-0 top-0 z-10 bg-white w-full md:py-15 lg:relative">
+        <header ref="headerRef" :class="cn('py-10 fixed left-0 top-0 z-10 bg-white w-full md:py-8.75 lg:relative', isAboutPage && 'bg-[#f8f8f5]' )">
             <div class="container">
                 <div class="flex justify-between items-center">
                     <Logo color="text-black" />
@@ -31,6 +36,7 @@
                             <ul class="flex gap-14.75">
                                 <RouterLink to="/" class="text-sm uppercase">{{t('nav.artists')}}</RouterLink>
                                 <RouterLink to="/about" class="text-sm uppercase">{{t('nav.about')}}</RouterLink>
+                                <RouterLink to="/about#events" class="text-sm uppercase">{{t('nav.events')}}</RouterLink>
                             </ul>
                         </nav>
     

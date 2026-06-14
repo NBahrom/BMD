@@ -10,6 +10,13 @@ const router = createRouter({
       return savedPosition
     }
 
+    // anchor link (e.g. /about#events) — wait for the (lazy) page to render
+    if (to.hash) {
+      return new Promise((resolve) => {
+        setTimeout(() => resolve({ el: to.hash, behavior: 'smooth' }), 350)
+      })
+    }
+
     // always scroll to top on route change
     return { top: 0 }
   },

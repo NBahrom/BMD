@@ -1,31 +1,90 @@
 {
-
   "meta": {
-    "homeTitle": "Showtime. Кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана."
+    "homeTitle": "The Show Time. Кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана."
   },
-
   "nav": {
     "artists": "Артисты",
     "about": "О нас",
     "book": "Забронировать",
     "booking": "Забронировать",
-    "nav": "Навигация"
+    "nav": "Навигация",
+    "events": "EVENTS"
   },
-
   "btns": {
     "loadMore": "Загрузить ещё",
     "submitBtn": "Отправить",
     "yandexBtn": "Yandex music ru",
     "spotifyBtn": "spotify ru"
   },
-
   "home": {
     "title": "Кураторское артистическое агентство, объединяющее лучших музыкантов и диджеев Узбекистана"
   },
-
-    "about": {
+  "about": {
     "title": "About us",
-    "desc": "Агентство Showtime – это тщательно отобранное агентство, объединяющее лучших музыкантов и диджеев Узбекистана. Мы оказываем полную поддержку: от подбора артистов для конкретного формата площадки до организации выступлений и контроля качества. Работая с нами, вы гарантированно получите профессионализм, высококачественное представление и уникальную атмосферу.",
+    "desc": " <b> Агентство The Show Time </b>   – это тщательно отобранное агентство, объединяющее лучших музыкантов и диджеев Узбекистана. Мы оказываем полную поддержку:от подбора артистов для конкретного формата площадки до организации выступлений и контроля качества. <b> Работая с нами, вы гарантированно получите профессионализм, высококачественное представление и уникальную атмосферу.</b> ",
+    "advantagesTitle": "Advantages",
+    "partnersCaption": "имеем честь работать с лучшими",
+    "eventsTitle": "Featured Events",
+    "eventsBtn": "Показать все события",
+    "eventsBtnLess": "Скрыть",
+    "founders": {
+      "founder1": {
+        "name": "Azizbek Gazinazarov",
+        "role": "со-основатель, DJ",
+        "bio": "In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us, such as hosting our services and data, managing how our services function, hosting our customer relationship management"
+      },
+      "founder2": {
+        "name": "Iskandar ikrami",
+        "role": "со-основатель, DJ",
+        "bio": "In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us, such as hosting our services and data, managing how our services function, hosting our customer relationship management"
+      },
+      "founder3": {
+        "name": "marat bikineev",
+        "role": "со-основатель, DJ",
+        "bio": "In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us, such as hosting our services and data, managing how our services function, hosting our customer relationship management"
+      }
+    },
+    "eventTags": {
+      "free": "Бесплатно",
+      "dogFriendly": "Можно с собакой"
+    },
+    "events": {
+      "event1": {
+        "title": "Фестиваль мечты",
+        "location": "Ташкент",
+        "description": "Это место для описания события. Здесь можно рассказать о программе, артистах и атмосфере вечера, а также о формате площадки и особенностях мероприятия.\n\nЗамените этот текст на реальное описание события — он управляется из файлов перевода и легко редактируется отдельно для каждого языка."
+      },
+      "event2": {
+        "title": "Арт лаунж",
+        "location": "Ташкент",
+        "description": "Это место для описания события. Здесь можно рассказать о программе, артистах и атмосфере вечера, а также о формате площадки и особенностях мероприятия.\n\nЗамените этот текст на реальное описание события — он управляется из файлов перевода и легко редактируется отдельно для каждого языка."
+      },
+      "event3": {
+        "title": "Гравитация звука",
+        "location": "Ташкент",
+        "description": "Это место для описания события. Здесь можно рассказать о программе, артистах и атмосфере вечера, а также о формате площадки и особенностях мероприятия.\n\nЗамените этот текст на реальное описание события — он управляется из файлов перевода и легко редактируется отдельно для каждого языка."
+      },
+      "event4": {
+        "title": "In search of Sunrise",
+        "location": "Ташкент",
+        "description": "Это место для описания события. Здесь можно рассказать о программе, артистах и атмосфере вечера, а также о формате площадки и особенностях мероприятия.\n\nЗамените этот текст на реальное описание события — он управляется из файлов перевода и легко редактируется отдельно для каждого языка."
+      },
+      "event5": {
+        "title": "Pepsi Max",
+        "location": "Ташкент",
+        "description": "Это место для описания события. Здесь можно рассказать о программе, артистах и атмосфере вечера, а также о формате площадки и особенностях мероприятия.\n\nЗамените этот текст на реальное описание события — он управляется из файлов перевода и легко редактируется отдельно для каждого языка."
+      },
+      "event6": {
+        "title": "Sunset Sessions",
+        "location": "Ташкент",
+        "description": "Это место для описания события. Здесь можно рассказать о программе, артистах и атмосфере вечера, а также о формате площадки и особенностях мероприятия.\n\nЗамените этот текст на реальное описание события — он управляется из файлов перевода и легко редактируется отдельно для каждого языка."
+      },
+      "event7": {
+        "title": "Night Groove",
+        "location": "Ташкент",
+        "description": "Это место для описания события. Здесь можно рассказать о программе, артистах и атмосфере вечера, а также о формате площадки и особенностях мероприятия.\n\nЗамените этот текст на реальное описание события — он управляется из файлов перевода и легко редактируется отдельно для каждого языка."
+      }
+    },
     "slider": {
       "title": "Why we re",
       "slide1": {
@@ -54,7 +113,6 @@
       }
     }
   },
-
   "categories": {
     "viewAll": "View all ru",
     "vocal": "Вокальный артист",
@@ -62,7 +120,6 @@
     "dj": "Диджей",
     "visual": "Визуальное продакшн"
   },
-
   "singers": {
     "emily": {
       "name": "Emily",
@@ -73,7 +130,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "djkarry": {
       "name": "DJ Karry",
       "desc": [
@@ -83,7 +139,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "mosaiq8e": {
       "name": "Mosaiq8e",
       "desc": [
@@ -93,7 +148,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "madlen": {
       "name": "Madlen",
       "desc": [
@@ -103,7 +157,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "eya": {
       "name": "Eya",
       "desc": [
@@ -113,7 +166,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "mone": {
       "name": "Mone",
       "desc": [
@@ -123,7 +175,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "qaraqoom": {
       "name": "Qaraqoom",
       "desc": [
@@ -133,7 +184,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "mitch": {
       "name": "Mitch",
       "desc": [
@@ -143,7 +193,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "kmrn": {
       "name": "KMRN",
       "desc": [
@@ -153,7 +202,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "pogosyan": {
       "name": "Сергей Погосян",
       "desc": [
@@ -163,7 +211,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "proof": {
       "name": "Proof",
       "desc": [
@@ -173,7 +220,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "ray": {
       "name": "Ray",
       "desc": [
@@ -183,7 +229,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "roxy": {
       "name": "Roxy",
       "desc": [
@@ -193,7 +238,6 @@
         "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
       ]
     },
-
     "silkband": {
       "name": "Silk band",
       "desc": [
@@ -204,14 +248,12 @@
       ]
     }
   },
-
   "footer": {
-    "aboutText": "Showtime — кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана.",
+    "aboutText": "The Show Time — кураторская артист-агенция, объединяющая лучших музыкантов и диджеев Узбекистана.",
     "rights": "Все права защищены",
     "privacyText": "Privacy Policy ru",
     "termsText": "Terms and Conditions ru"
   },
-
   "contact": {
     "adress": "Адрес",
     "adressText": "COMMUNITY <br>TARAS SHEVCHENKO, 24 <br>Tashkent, uzbekistan",
@@ -219,7 +261,6 @@
     "contactName1": "Марат Бикинеев",
     "contactName2": "Дима Митч"
   },
-
   "bookModal": {
     "title": "Book artist",
     "description": "Please fill in the form below. Provide as much information as possible about your upcoming event.",
@@ -229,10 +270,8 @@
     "thankyouTitle": "Thank you!",
     "errorTitle": "Sorry",
     "thankyouDesc": "Your message has been sent. We’ll be in touch shortly.",
-    "errorDesc": "There was some issue. please try after sometime"  
+    "errorDesc": "There was some issue. please try after sometime"
   },
-
-
   "PrivacyPolicy": {
     "title": "Privacy Policy",
     "content": [
@@ -243,19 +282,19 @@
           "When you make a purchase or otherwise utilize the Site, we may need to provide your information, including the information indicated above, to certain third-party service providers. The categories of third-party service providers we may share with include payment processors, email and SMS marketing providers, social networks, analytics providers, product manufacturers, shipping companies, parties used in the sending of postal mail or emails, accounting and record-keeping parties, security and fraud prevention providers, advertisers, and other web-based services. Your information is disclosed to such third-party service providers only as necessary to complete the transaction for which they have been engaged by us"
         ]
       },
-      { 
+      {
         "title": "OPT-OUT POLICY",
         "text": [
           "We will collect the information that you provide to us to perform any transaction requested by you, including registering for a NUTRL Skin’ account, subscribing to a mailing list or our newsletter, participating in promotions, purchasing products offered on the Site, responding to questions or comments you may have and for any other purposes with your consent. This information may include information such as, among other items, your name, shipping address, billing information, email address, telephone number, credit card information or other payment information."
         ]
       },
-      { 
+      {
         "title": "OTHER INFORMATION COLLECTED BY THE SITE",
         "text": [
           "The Site automatically collects information as you navigate through the Site. Information collected automatically may include Internet Protocol addresses, details relating to your use of the Site and information collected through cookies and other tracking technologies. This information collected is generally statistical data and does not identify you specifically. We will not re-identify such statistical or de-identified data. This information is used by us to improve the Site and to deliver better service to the Site's users."
         ]
       },
-      { 
+      {
         "title": "QUESTIONS AND CONTACT INFORMATION",
         "text": [
           "If you would like to: access, correct, amend or delete any personal information we have about you, make changes to your account, register a complaint, or simply want more information, please contact our Privacy Compliance Officer at the following:",

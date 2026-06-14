@@ -1,0 +1,85 @@
+[
+  {
+    "id": "event1",
+    "date": "15.06.2026",
+    "image": "/images/events/main.jpg",
+    "thumbnails": [
+      "/images/events/main.jpg",
+      "/images/events/g1.jpg",
+      "/images/events/g2.jpg",
+      "/images/events/g3.jpg",
+      "/images/events/g1.jpg"
+    ],
+    "tags": ["free", "dogFriendly"]
+  },
+  {
+    "id": "event2",
+    "date": "15.06.2026",
+    "image": "/images/events/main.jpg",
+    "thumbnails": [
+      "/images/events/main.jpg",
+      "/images/events/g1.jpg",
+      "/images/events/g2.jpg",
+      "/images/events/g3.jpg",
+      "/images/events/g1.jpg"
+    ],
+    "tags": ["free", "dogFriendly"]
+  },
+  {
+    "id": "event3",
+    "date": "15.06.2026",
+    "image": "/images/events/main.jpg",
+    "thumbnails": [
+      "/images/events/main.jpg",
+      "/images/events/g1.jpg",
+      "/images/events/g2.jpg",
+      "/images/events/g3.jpg"
+    ],
+    "tags": ["free"]
+  },
+  {
+    "id": "event4",
+    "date": "15.06.2026",
+    "image": "/images/events/main.jpg",
+    "thumbnails": [
+      "/images/events/main.jpg",
+      "/images/events/g1.jpg",
+      "/images/events/g2.jpg"
+    ],
+    "tags": ["dogFriendly"]
+  },
+  {
+    "id": "event5",
+    "date": "15.06.2026",
+    "image": "/images/events/main.jpg",
+    "thumbnails": [
+      "/images/events/main.jpg",
+      "/images/events/g1.jpg",
+      "/images/events/g2.jpg",
+      "/images/events/g3.jpg"
+    ],
+    "tags": ["free", "dogFriendly"]
+  },
+  {
+    "id": "event6",
+    "date": "15.06.2026",
+    "image": "/images/events/main.jpg",
+    "thumbnails": [
+      "/images/events/main.jpg",
+      "/images/events/g1.jpg",
+      "/images/events/g2.jpg"
+    ],
+    "tags": ["free"]
+  },
+  {
+    "id": "event7",
+    "date": "15.06.2026",
+    "image": "/images/events/main.jpg",
+    "thumbnails": [
+      "/images/events/main.jpg",
+      "/images/events/g1.jpg",
+      "/images/events/g3.jpg"
+    ],
+    "tags": ["free", "dogFriendly"]
+  }
+]

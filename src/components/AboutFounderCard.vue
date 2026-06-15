@@ -1,21 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 defineProps<{
   image: string
   name: string
   role: string
   bio: string
+  revealed: boolean
 }>()
 
-const revealed = ref(false)
-const toggle = () => (revealed.value = !revealed.value)
+const emit = defineEmits<{ toggle: [] }>()
+const toggle = () => emit('toggle')
 </script>
 
 <template>
   <div class="flex flex-col gap-7.5">
     <!-- Image / reveal area -->
-    <div class="relative h-105.5 w-full overflow-hidden bg-[#f3f4f1]">
+    <div  @click="toggle" class="relative group h-105.5 w-full cursor-pointer overflow-hidden bg-[#f3f4f1]">
       <img
         class="absolute inset-0 h-full w-full object-cover"
         :src="image"
@@ -24,7 +23,7 @@ const toggle = () => (revealed.value = !revealed.value)
 
       <!-- Dark bio overlay -->
       <div
-        class="absolute inset-0 flex flex-col bg-[#181818] p-11 transition-opacity duration-500 ease-out"
+        class="absolute inset-0 flex flex-col bg-[#181818] p-11"
         :class="revealed ? 'opacity-100' : 'pointer-events-none opacity-0'"
       >
         <p class="text-[14px]/[1.3] font-medium tracking-[-0.42px] text-white/80">
@@ -35,10 +34,9 @@ const toggle = () => (revealed.value = !revealed.value)
       <!-- Toggle button -->
       <button
         type="button"
-        @click="toggle"
         :aria-pressed="revealed"
         aria-label="Toggle bio"
-        class="group absolute bottom-11.25 right-11 z-10 flex size-14.5 cursor-pointer items-center justify-center rounded-full transition-colors duration-300"
+        class="absolute bottom-11.25 right-11 z-10 flex size-14.5 cursor-pointer items-center justify-center rounded-full"
         :class="revealed
           ? 'border-white/20 bg-white'
           : 'border-white/15 bg-[#181818]/80 backdrop-blur-sm'"

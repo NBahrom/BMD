@@ -24,7 +24,7 @@ const isOpenVideoModal = ref(false)
  * slide's centre lands on the viewport centre. Size + transform animate
  * together, so the motion stays smooth.
  * ------------------------------------------------------------------ */
-const activeIndex = ref(0)
+const activeIndex = ref(1)
 const viewportRef = ref<HTMLElement | null>(null)
 const viewportWidth = ref(0)
 const ready = ref(false)
@@ -43,8 +43,8 @@ function computeSizes() {
     const w = window.innerWidth
     if (w >= 1024) {
         // Laptop / desktop — exact Figma values.
-        sizes.activeW = 834; sizes.activeH = 487
-        sizes.sideW = 439;  sizes.sideH = 353
+        sizes.activeW = 835; sizes.activeH = 530
+        sizes.sideW = 600;  sizes.sideH = 355
         sizes.gap = 20
     } else if (w >= 768) {
         // Tablet — exact Figma values.
@@ -158,7 +158,7 @@ onUnmounted(() => {
                 :video-type="activeProject.video.type"
             />
 
-            <div class="gap-10 hidden justify-center items-center mt-7.5 lg:flex">
+            <div class="gap-7.5 hidden justify-center items-center mt-7.5 lg:flex">
                 <ArrowLeftIcon class="cursor-pointer" @click="goPrev" />
                 <ArrowRightIcon class="cursor-pointer" @click="goNext" />
             </div>

@@ -31,7 +31,7 @@
                 <div class="flex justify-between items-center">
                     <Logo color="text-black" />
     
-                    <div class="max-w-144.25 w-full flex items-center justify-end lg:justify-between">
+                    <div class="w-auto flex items-center justify-end lg:gap-19.5">
                         <nav class="hidden lg:block">
                             <ul class="flex gap-14.75">
                                 <RouterLink to="/" class="text-sm uppercase">{{t('nav.artists')}}</RouterLink>
@@ -44,7 +44,7 @@
                             <button v-if="locale === 'en'" @click="loadLocale('ru')" class="px-2.25 cursor-pointer text-sm opacity-50 border-0 bg-transparent">RU</button> 
                             <button v-else @click="loadLocale('en')" class="px-2.25 cursor-pointer text-sm opacity-50 border-0 bg-transparent">EN</button>    
                             
-                            <button @click="isOpenBookModal = true" class="px-8 py-5.5 cursor-pointer bg-[#181818] text-white text-[13px]/[100%] uppercase hidden lg:block">{{t('nav.book')}}</button>
+                            <button @click="isOpenBookModal = true" class="px-8 py-5.5 min-w-31.25 cursor-pointer bg-[#181818] text-white text-[13px]/[100%] uppercase hidden lg:block">{{t('nav.book')}}</button>
                             
                             <button @click="isOpenMobileModal = !isOpenMobileModal" class="size-14.5 flex justify-center items-center bg-[#181818] rounded-full lg:hidden" >
                                 <BurgerMenu v-if="isOpenMobileModal == false" />

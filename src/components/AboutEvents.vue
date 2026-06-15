@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref, reactive, computed } from 'vue'
+  import { ref, reactive, computed, onMounted, onUnmounted } from 'vue'
   import { useI18n } from 'vue-i18n'
   import eventsData from '@/data/events.json'
   import Spinner from './icons/Spinner.vue'
@@ -7,9 +7,17 @@
   const { t } = useI18n()
 
   const INITIAL_COUNT = 5
-  const openId = ref<string | null>(null)
+  // Set of currently open rows. On desktop only one stays open at a time; on
+  // tablet / mobile several can be open independently (see toggle()).
+  const openIds = reactive(new Set<string>())
+  const isOpen = (id: string) => openIds.has(id)
   const showAll = ref(false)
   const isLoading = ref(false)
+
+  // Desktop keeps the single-open (accordion) behaviour; below lg rows toggle
+  // independently.
+  const isDesktop = ref(true)
+  const updateIsDesktop = () => { isDesktop.value = window.innerWidth >= 1024 }
 
   // Active gallery thumbnail index per event (defaults to the first / main image)
   const activeThumb = reactive<Record<string, number>>({})
@@ -21,8 +29,45 @@
     showAll.value ? eventsData : eventsData.slice(0, INITIAL_COUNT),
   )
 
+  // While a row's panel collapses we keep it visually "dark" so it doesn't
+  // flash white (white text on white bg) mid-close. closingId holds the row
+  // that is currently animating closed.
+  const closingId = ref<string | null>(null)
+  let closeTimer: ReturnType<typeof setTimeout> | null = null
+  const PANEL_MS = 600 // how long the closing colour-fade lasts (see <style>)
+
+  // Only genuinely open rows are dark. A closing row switches to the light
+  // state immediately, but the `closing` class slows its colour transition so
+  // it fades to white smoothly while its panel collapses (see <style>).
+  const isDark = (id: string) => openIds.has(id)
+
+  // Flag a row as "closing" so its colours fade out over the collapse instead
+  // of snapping (see <style>).
+  const startClosing = (id: string) => {
+    closingId.value = id
+    if (closeTimer) clearTimeout(closeTimer)
+    closeTimer = setTimeout(() => {
+      closingId.value = null
+      closeTimer = null
+    }, PANEL_MS)
+  }
+
   const toggle = (id: string) => {
-    openId.value = openId.value === id ? null : id
+    if (openIds.has(id)) {
+      // Clicking an open row always closes it.
+      openIds.delete(id)
+      startClosing(id)
+      return
+    }
+    // On desktop, opening a row closes any other open row (accordion). On
+    // tablet / mobile, leave other open rows as they are.
+    if (isDesktop.value) {
+      openIds.forEach((other) => {
+        openIds.delete(other)
+        startClosing(other)
+      })
+    }
+    openIds.add(id)
   }
 
   // Show all events with a brief loading spinner, then hide the button.
@@ -34,6 +79,12 @@
       isLoading.value = false
     }, 1000)
   }
+
+  onMounted(() => {
+    updateIsDesktop()
+    window.addEventListener('resize', updateIsDesktop)
+  })
+  onUnmounted(() => window.removeEventListener('resize', updateIsDesktop))
 
   const paragraphs = (id: string) =>
     t(`about.events.${id}.description`).split('\n\n')
@@ -50,7 +101,10 @@
             }
           })
         },
-        { threshold: 0.15 },
+        // Trigger only once the row has scrolled into the upper 60% of the
+        // viewport (bottom 40% is ignored), so the animation is visible to
+        // the user instead of finishing before they reach the section.
+        { threshold: 0, rootMargin: '0px 0px -20% 0px' },
       )
       io.observe(el)
     },
@@ -70,40 +124,40 @@
             v-for="(ev, index) in visibleEvents"
             :key="ev.id"
             v-reveal="ev.id"
-            :style="{ transitionDelay: index * 0.10 + 's' }"
+            :style="{ transitionDelay: (index % INITIAL_COUNT) * 0.10 + 's' }"
             class="event-row group transition-colors duration-300  px-8.75 first:[&_button]:border-t"
-            :class="[openId === ev.id ? 'bg-[#181818]' : 'hover:bg-[#181818]', { 'is-visible': revealed[ev.id] }]"
+            :class="[isDark(ev.id) ? 'bg-[#181818] border-y border-[#a1a1a126]' : 'hover:bg-[#181818]', { 'is-visible': revealed[ev.id], closing: closingId === ev.id }]"
           >
             <!-- Row header -->
             <button
               type="button"
               @click="toggle(ev.id)"
-              :aria-expanded="openId === ev.id"
-              class="flex w-full cursor-pointer items-center gap-5 px-5 py-8 text-left border-b border-[#18181826] md:px-10 lg:px-20"
+              :aria-expanded="isOpen(ev.id)"
+              class="flex w-full cursor-pointer items-center gap-5 px-5 py-8 text-left border-b border-[#18181826] md:px-10 lg:gap-25 lg:px-20"
             >
               <div class="flex flex-1 flex-col gap-2 md:flex-row md:items-center md:gap-0">
                 <span
                   class="text-[16px]/[100%] font-medium tracking-[-0.48px] transition-colors md:w-20 md:shrink-0"
-                  :class="openId === ev.id ? 'text-white' : 'text-[#181818] group-hover:text-white'"
+                  :class="isDark(ev.id) ? 'text-white' : 'text-[#181818] group-hover:text-white'"
                 >
                   {{ ev.date }}
                 </span>
                 <span
                   class="font-heading text-[22px]/[100%] tracking-[-1.56px] transition-colors md:ms-10 lg:ms-20 lg:text-[26px]/[100%]"
-                  :class="openId === ev.id ? 'text-white' : 'text-[#181818] group-hover:text-white'"
+                  :class="isDark(ev.id) ? 'text-white' : 'text-[#181818] group-hover:text-white'"
                 >
                   {{ t(`about.events.${ev.id}.title`) }}
                 </span>
                 <span
                   class="hidden text-[16px]/[1.3] font-medium uppercase tracking-[-0.48px] transition-colors lg:block lg:ms-auto"
-                  :class="openId === ev.id ? 'text-white/50' : 'text-[#18181880] group-hover:text-white/50'"
+                  :class="isDark(ev.id) ? 'text-white/50' : 'text-[#18181880] group-hover:text-white/50'"
                 >
                   {{ t(`about.events.${ev.id}.location`) }}
                 </span>
               </div>
               <span
                 class="shrink-0 self-center transition-all duration-300"
-                :class="openId === ev.id ? 'rotate-180 text-white' : 'text-[#181818] group-hover:text-white'"
+                :class="[isOpen(ev.id) ? 'rotate-180' : '', isDark(ev.id) ? 'text-white' : 'text-[#181818] group-hover:text-white']"
               >
                 <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 1V16M1 10L7 16L13 10" stroke="currentColor" stroke-width="2" />
@@ -114,7 +168,7 @@
             <!-- Expandable panel -->
             <div
               class="grid transition-all duration-500 ease-out"
-              :class="openId === ev.id ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'"
+              :class="isOpen(ev.id) ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'"
             >
               <div class="overflow-hidden">
                 <div class="px-5 pb-10 md:px-10 lg:px-20">
@@ -194,14 +248,35 @@
 .event-row {
   opacity: 0;
   transform: translateX(-30px);
+  /* Include the colour properties here: the `transition` shorthand otherwise
+     overrides Tailwind's transition-colors, which is why the background used
+     to snap instantly. */
   transition:
     opacity 0.5s ease-out,
-    transform 0.5s ease-out;
+    transform 0.5s ease-out,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .event-row.is-visible {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* While a row is closing, fade its colours slowly (0.6s) so the dark -> white
+   change is smooth and spans the collapse instead of snapping. */
+.event-row.closing {
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out,
+    background-color 0.6s ease,
+    border-color 0.6s ease,
+    color 0.6s ease;
+}
+
+.event-row.closing span {
+  transition-duration: 0.6s !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

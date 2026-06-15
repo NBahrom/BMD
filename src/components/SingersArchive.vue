@@ -64,10 +64,10 @@ function loadMore() {
             <div  
                 v-for="(singer, index) in visibleSingers"
                 :key="categoryStore.currentCategory + '-' + singer.id"
-                :style="{ animationDelay: index * 0.10 + 's' }"
-                class="card-in w-full flex flex-col gap-3 relative hover:[&_svg]:ml-2"
+                :style="{ animationDelay: (index % ITEMS_PER_PAGE) * 0.15 + 's' }"
+                class="card-in w-full flex flex-col gap-3 relative  hover:[&_svg]:ml-2"
             >   
-                <div class="flex gap-2 absolute top-6.5 left-6.5">
+                <div class="flex gap-2 absolute z-10 top-6.5 left-6.5">
                     <span
                         v-for="catId in singer.categoryIds"
                         class="px-3 py-1.5 text-sm text-white border border-[#FFFFFF4D]"
@@ -76,7 +76,7 @@ function loadMore() {
                     </span>
                 </div>
     
-                <RouterLink :to="'/singers/' + singer.id" class="w-full h-92.5 md:h-101.5 lg:h-124.25">
+                <RouterLink :to="'/singers/' + singer.id" class="w-full h-92.5 transition-all duration-300  hover:opacity-80 md:h-101.5 lg:h-124.25">
                     <img class="w-full h-full object-cover" :src="singer.image" :alt="t(singer.nameKey)">
                 </RouterLink>
                 
@@ -104,11 +104,11 @@ function loadMore() {
 @keyframes card-in {
   from {
     opacity: 0;
-    transform: translateY(-15px);
+    /* transform: translateY(-15px); */
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    /* transform: translateY(0); */
   }
 }
 

@@ -2,7 +2,16 @@
 import SingersArchive from '@/components/SingersArchive.vue';
 import SingersCategoryList from '@/components/SingersCategoryList.vue';
 import { useI18n } from 'vue-i18n'
+import { onUnmounted } from 'vue'
+import { useCategoryStore } from '@/store/category'
 const { t } = useI18n()
+
+// Reset the artist filter to its default when leaving the home page,
+// so returning later always shows all artists (not the previous filter).
+const categoryStore = useCategoryStore()
+onUnmounted(() => {
+  categoryStore.setCurrentCategory('viewAll')
+})
 </script>
 
 <template>

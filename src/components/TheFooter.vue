@@ -58,7 +58,7 @@ const { t } = useI18n()
                             </div>
                         </div>
                         
-                        <ContactUsInfo class="flex-col hidden lg:flex" />
+                        <!-- <ContactUsInfo class="flex-col hidden lg:flex" /> -->
                     </div>
                 </div>
 

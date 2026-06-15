@@ -1,16 +1,23 @@
 <script setup lang="ts">
+  import { ref } from 'vue'
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import { useI18n } from 'vue-i18n'
-  import maratImg from '@/assets/images/marat.png'
-  import dimaImg from '@/assets/images/dima.png'
-  import azizImg from '@/assets/images/azizbek.png'
+  import maratImg from '@/assets/images/marat.webp'
+  import iskandarImg from '@/assets/images/iskandar.webp'
+  import azizImg from '@/assets/images/azizbek.webp'
   import AboutFounderCard from '@/components/AboutFounderCard.vue'
 
   const { t } = useI18n()
 
+  // Only one founder's bio can be open at a time; opening another closes it.
+  const openKey = ref<string | null>(null)
+  const toggleFounder = (key: string) => {
+    openKey.value = openKey.value === key ? null : key
+  }
+
   const founders = [
     { key: 'about.founders.founder1', image: azizImg },
-    { key: 'about.founders.founder2', image: dimaImg },
+    { key: 'about.founders.founder2', image: iskandarImg },
     { key: 'about.founders.founder3', image: maratImg },
   ]
 
@@ -37,6 +44,8 @@
               :name="t(`${f.key}.name`)"
               :role="t(`${f.key}.role`)"
               :bio="t(`${f.key}.bio`)"
+              :revealed="openKey === f.key"
+              @toggle="toggleFounder(f.key)"
             />
           </swiper-slide>
         </swiper>

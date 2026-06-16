@@ -62,13 +62,13 @@
     ]
   },
   {
-    "id": "djkarry",
-    "nameKey": "singers.djkarry.name",
+    "id": "kmrn",
+    "nameKey": "singers.kmrn.name",
     "categoryIds": ["dj"],
-    "descKey": "singers.djkarry.desc",
-    "image": "/images/DJ Karry/kerry_main.webp",
-    "spotifyLink": "https/spot",
-    "yandexLink": "https/yand",
+    "descKey": "singers.kmrn.desc",
+    "image": "/images/KMRN/kmrn_main.webp",
+    "spotifyLink": "singers.kmrnhttps/spot",
+    "yandexLink": "singers.kmrnhttps/yand",
     "socials": [
       {
         "id":"telegram",
@@ -85,7 +85,7 @@
       {
         "id":"tiktok",
         "link": "https/t.me"
-      },
+      }      ,
       {
         "id":"youtube",
         "link": "https/t.me"
@@ -103,21 +103,28 @@
       {
         "coverPhoto": {
           "alt": "image of project",
-          "src": "/images/DJ Karry/kerry1.webp"
+          "src": "/images/KMRN/kmrn1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
           "alt": "image of project",
-          "src": "/images/DJ Karry/kerry2.webp"
+          "src": "/images/KMRN/kmrn2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
           "alt": "image of project",
-          "src": "/images/DJ Karry/kerry3.webp"
+          "src": "/images/KMRN/kmrn3.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/KMRN/kmrn4.webp"
         },
         "video": null
       }
@@ -365,13 +372,13 @@
     ]
   },
   {
-    "id": "qaraqoom",
-    "nameKey": "singers.qaraqoom.name",
-    "categoryIds": ["live"],
-    "descKey": "singers.qaraqoom.desc",
-    "image": "/images/Qaraqoom/qaraqoom_main.webp",
-    "spotifyLink": "singers.qaraqoomhttps/spot",
-    "yandexLink": "singers.qaraqoomhttps/yand",
+    "id": "proof",
+    "nameKey": "singers.proof.name",
+    "categoryIds": ["dj"],
+    "descKey": "singers.proof.desc",
+    "image": "/images/Proof/proof_main.webp",
+    "spotifyLink": "singers.kmrnhttps/spot",
+    "yandexLink": "singers.kmrnhttps/yand",
     "socials": [
       {
         "id":"telegram",
@@ -406,21 +413,21 @@
       {
         "coverPhoto": {
           "alt": "image of project",
-          "src": "/images/Qaraqoom/qaraqoom1.webp"
+          "src": "/images/Proof/proof1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
           "alt": "image of project",
-          "src": "/images/Qaraqoom/qaraqoom2.webp"
+          "src": "/images/Proof/proof2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
           "alt": "image of project",
-          "src": "/images/Qaraqoom/qaraqoom3.webp"
+          "src": "/images/Proof/proof3.webp"
         },
         "video": null
       }
@@ -488,14 +495,14 @@
       }
     ]
   },
-  {
-    "id": "kmrn",
-    "nameKey": "singers.kmrn.name",
+    {
+    "id": "djkarry",
+    "nameKey": "singers.djkarry.name",
     "categoryIds": ["dj"],
-    "descKey": "singers.kmrn.desc",
-    "image": "/images/KMRN/kmrn_main.webp",
-    "spotifyLink": "singers.kmrnhttps/spot",
-    "yandexLink": "singers.kmrnhttps/yand",
+    "descKey": "singers.djkarry.desc",
+    "image": "/images/DJ Karry/kerry_main.webp",
+    "spotifyLink": "https/spot",
+    "yandexLink": "https/yand",
     "socials": [
       {
         "id":"telegram",
@@ -512,7 +519,7 @@
       {
         "id":"tiktok",
         "link": "https/t.me"
-      }      ,
+      },
       {
         "id":"youtube",
         "link": "https/t.me"
@@ -530,28 +537,21 @@
       {
         "coverPhoto": {
           "alt": "image of project",
-          "src": "/images/KMRN/kmrn1.webp"
+          "src": "/images/DJ Karry/kerry1.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
           "alt": "image of project",
-          "src": "/images/KMRN/kmrn2.webp"
+          "src": "/images/DJ Karry/kerry2.webp"
         },
         "video": null
       },
       {
         "coverPhoto": {
           "alt": "image of project",
-          "src": "/images/KMRN/kmrn3.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/KMRN/kmrn4.webp"
+          "src": "/images/DJ Karry/kerry3.webp"
         },
         "video": null
       }
@@ -560,7 +560,7 @@
   {
     "id": "pogosyan",
     "nameKey": "singers.pogosyan.name",
-    "categoryIds": ["dj"],
+    "categoryIds": ["visual"],
     "descKey": "singers.pogosyan.desc",
     "image": "/images/Pogosyan/pogosyan_main.webp",
     "spotifyLink": "singers.kmrnhttps/spot",
@@ -614,68 +614,6 @@
         "coverPhoto": {
           "alt": "image of project",
           "src": "/images/Pogosyan/pogosyan3.webp"
-        },
-        "video": null
-      }
-    ]
-  },
-  {
-    "id": "proof",
-    "nameKey": "singers.proof.name",
-    "categoryIds": ["dj"],
-    "descKey": "singers.proof.desc",
-    "image": "/images/Proof/proof_main.webp",
-    "spotifyLink": "singers.kmrnhttps/spot",
-    "yandexLink": "singers.kmrnhttps/yand",
-    "socials": [
-      {
-        "id":"telegram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"facebook",
-        "link": "https/t.me"
-      },
-      {
-        "id":"instagram",
-        "link": "https/t.me"
-      },
-      {
-        "id":"tiktok",
-        "link": "https/t.me"
-      }      ,
-      {
-        "id":"youtube",
-        "link": "https/t.me"
-      },
-      {
-        "id":"link",
-        "link": "https/link"
-      },
-      {
-        "id":"telegram",
-        "link": "https/t.me"
-      }
-    ],
-    "projects": [
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Proof/proof1.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Proof/proof2.webp"
-        },
-        "video": null
-      },
-      {
-        "coverPhoto": {
-          "alt": "image of project",
-          "src": "/images/Proof/proof3.webp"
         },
         "video": null
       }
@@ -862,6 +800,206 @@
         "coverPhoto": {
           "alt": "image of project",
           "src": "/images/Silk band/silk3.webp"
+        },
+        "video": null
+      }
+    ]
+  },
+    {
+    "id": "qaraqoom",
+    "nameKey": "singers.qaraqoom.name",
+    "categoryIds": ["live"],
+    "descKey": "singers.qaraqoom.desc",
+    "image": "/images/Qaraqoom/qaraqoom_main.webp",
+    "spotifyLink": "singers.qaraqoomhttps/spot",
+    "yandexLink": "singers.qaraqoomhttps/yand",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"link",
+        "link": "https/link"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Qaraqoom/qaraqoom1.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Qaraqoom/qaraqoom2.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Qaraqoom/qaraqoom3.webp"
+        },
+        "video": null
+      }
+    ]
+  },
+    {
+    "id": "Ben",
+    "nameKey": "singers.ben.name",
+    "categoryIds": ["live"],
+    "descKey": "singers.ben.desc",
+    "image": "/images/Ben Zaplavski/ben_main.webp",
+    "spotifyLink": "singers.qaraqoomhttps/spot",
+    "yandexLink": "singers.qaraqoomhttps/yand",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"link",
+        "link": "https/link"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Ben Zaplavski/ben1.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Ben Zaplavski/ben2.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Ben Zaplavski/ben3.webp"
+        },
+        "video": null
+      }
+    ]
+  },
+    {
+    "id": "elizaveta",
+    "nameKey": "singers.elizaveta.name",
+    "categoryIds": ["live"],
+    "descKey": "singers.elizaveta.desc",
+    "image": "/images/Elizaveta Shus/elizaveta_main.webp",
+    "spotifyLink": "singers.qaraqoomhttps/spot",
+    "yandexLink": "singers.qaraqoomhttps/yand",
+    "socials": [
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"facebook",
+        "link": "https/t.me"
+      },
+      {
+        "id":"instagram",
+        "link": "https/t.me"
+      },
+      {
+        "id":"tiktok",
+        "link": "https/t.me"
+      }      ,
+      {
+        "id":"youtube",
+        "link": "https/t.me"
+      },
+      {
+        "id":"link",
+        "link": "https/link"
+      },
+      {
+        "id":"telegram",
+        "link": "https/t.me"
+      }
+    ],
+    "projects": [
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Elizaveta Shus/elizaveta1.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Elizaveta Shus/elizaveta2.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Elizaveta Shus/elizaveta3.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Elizaveta Shus/elizaveta4.webp"
+        },
+        "video": null
+      },
+      {
+        "coverPhoto": {
+          "alt": "image of project",
+          "src": "/images/Elizaveta Shus/elizaveta5.webp"
         },
         "video": null
       }

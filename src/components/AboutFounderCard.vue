@@ -1,5 +1,7 @@
 <script setup lang="ts">
-defineProps<{
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+const props = defineProps<{
   image: string
   name: string
   role: string
@@ -7,16 +9,30 @@ defineProps<{
   revealed: boolean
 }>()
 
-const emit = defineEmits<{ toggle: [] }>()
-const toggle = () => emit('toggle')
+const emit = defineEmits<{ open: []; toggle: []; close: [] }>()
+
+const rootRef = ref<HTMLElement | null>(null)
+
+// Image click only opens; the inner button toggles (so it can also close).
+const openCard = () => emit('open')
+const toggleCard = () => emit('toggle')
+
+// While open, a click anywhere outside this card closes it. (The opening
+// click is inside the card, so contains() is true and it stays open.)
+function onDocClick(e: MouseEvent) {
+  if (!props.revealed) return
+  if (rootRef.value && !rootRef.value.contains(e.target as Node)) emit('close')
+}
+onMounted(() => document.addEventListener('click', onDocClick))
+onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
 </script>
 
 <template>
-  <div class="flex flex-col gap-7.5">
+  <div ref="rootRef" class="flex flex-col gap-7.5">
     <!-- Image / reveal area -->
-    <div  @click="toggle" class="relative group h-105.5 w-full cursor-pointer overflow-hidden bg-[#f3f4f1]">
+    <div  @click="openCard" class="relative group h-105.5 w-full overflow-hidden bg-[#f3f4f1]">
       <img
-        class="absolute inset-0 h-full w-full object-cover"
+        class="absolute inset-0 h-full w-full object-cover cursor-pointer" 
         :src="image"
         :alt="`photo of ${name}`"
       />
@@ -34,6 +50,7 @@ const toggle = () => emit('toggle')
       <!-- Toggle button -->
       <button
         type="button"
+        @click.stop="toggleCard"
         :aria-pressed="revealed"
         aria-label="Toggle bio"
         class="absolute bottom-11.25 right-11 z-10 flex size-14.5 cursor-pointer items-center justify-center rounded-full"

@@ -19,7 +19,7 @@ const textContent = currentSinger && tm(currentSinger.descKey)as Array<string>
 </script>
 
 <template>
-    <section v-if="currentSinger" class=" mt-5 mb-13.75 md:mb-25 lg:mb-38.75 lg:mt-16.25">
+    <section v-if="currentSinger" class=" mt-5 mb-13.75 md:mb-25 lg:mb-22.5 lg:mt-16.25">
         <div class="container">
             <div class="flex justify-between flex-col-reverse gap-10 lg:flex-row">
                 <div class="max-w-none w-full flex flex-col lg:max-w-155.25">

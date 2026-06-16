@@ -112,7 +112,7 @@
 </script>
 
 <template>
-  <section id="events" class="scroll-mt-[var(--header-height)] overflow-x-clip py-20 lg:scroll-mt-0 lg:py-30">
+  <section id="events" class="scroll-mt-[var(--header-height)] overflow-x-clip py-20 lg:scroll-mt-0 lg:py-22.5">
     <div class="container">
       <div class="mx-auto flex max-w-261 flex-col items-center gap-12 lg:gap-15">
         <h2 class="w-full text-left text-[34px]/[100%] tracking-tight md:text-center md:text-[45px]/[100%] lg:text-[50px]/[100%] lg:tracking-[-3px]">
@@ -124,8 +124,8 @@
             v-for="(ev, index) in visibleEvents"
             :key="ev.id"
             v-reveal="ev.id"
-            :style="{ transitionDelay: (index % INITIAL_COUNT) * 0.10 + 's' }"
-            class="event-row group transition-colors duration-300  px-8.75 first:[&_button]:border-t"
+            :style="{ '--reveal-delay': (index % INITIAL_COUNT) * 0.10 + 's' }"
+            class="event-row group transition-colors duration-300  px-8.75 md:px-0 first:[&_button]:border-t"
             :class="[isDark(ev.id) ? 'bg-[#181818] border-y border-[#a1a1a126]' : 'hover:bg-[#181818]', { 'is-visible': revealed[ev.id], closing: closingId === ev.id }]"
           >
             <!-- Row header -->
@@ -248,12 +248,12 @@
 .event-row {
   opacity: 0;
   transform: translateX(-30px);
-  /* Include the colour properties here: the `transition` shorthand otherwise
-     overrides Tailwind's transition-colors, which is why the background used
-     to snap instantly. */
+  /* The reveal stagger delay applies ONLY to opacity/transform (via
+     --reveal-delay). Colours have no delay, so hover goes straight to black
+     instead of flashing white-then-black. */
   transition:
-    opacity 0.5s ease-out,
-    transform 0.5s ease-out,
+    opacity 0.5s ease-out var(--reveal-delay, 0s),
+    transform 0.5s ease-out var(--reveal-delay, 0s),
     background-color 0.3s ease,
     border-color 0.3s ease,
     color 0.3s ease;
@@ -268,8 +268,8 @@
    change is smooth and spans the collapse instead of snapping. */
 .event-row.closing {
   transition:
-    opacity 0.5s ease-out,
-    transform 0.5s ease-out,
+    opacity 0.5s ease-out var(--reveal-delay, 0s),
+    transform 0.5s ease-out var(--reveal-delay, 0s),
     background-color 0.6s ease,
     border-color 0.6s ease,
     color 0.6s ease;

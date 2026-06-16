@@ -14,10 +14,10 @@ const { t } = useI18n()
 <template>
     <footer class="pt-18.75 bg-[#181818] pb-17.5 md:pt-16.25 lg:pb-12 lg:pt-13.75">
         <div class="container">
-            <div class="flex-col border-b border-[#FFFFFF1A] pb-11 md:pb-15 lg:pb-12.5">
+            <div class="flex-col border-b border-[#FFFFFF1A] pb-11 md:pb-15 lg:pb-13.75">
                 <div class="flex justify-between">
                     <div class="flex flex-col">
-                        <div class="mb-6 flex flex-col gap-6.5 max-w-65.5  md:mb-8 lg:max-w-99.5 lg:mb-19.75">
+                        <div class="mb-6 flex flex-col gap-6.5 max-w-65.5  md:mb-8 lg:max-w-99.5 lg:mb-0">
                             <Logo color="text-white" />
                             <p class="text-sm/[120%] text-white opacity-30">{{ t("footer.aboutText") }}</p>
                         </div>
@@ -69,10 +69,10 @@ const { t } = useI18n()
             <div class="mt-10 flex flex-col gap-5 md:mt-7.5 md:flex-row md:justify-between lg:justify-start lg:gap-14.5  lg:mt-10">
                 <p class="text-[#FFFFFF66] text-sm/[100%]">{{currentYear}}, The Show Time. {{t("footer.rights")}}.</p>
 
-                <div class="flex gap-2.5 flex-col md:flex-row md:gap-6.25">
+                <!-- <div class="flex gap-2.5 flex-col md:flex-row md:gap-6.25">
                     <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/privacy-policy"> Privacy Policy </RouterLink>
                     <RouterLink class="text-[#ffffff3f] underline text-sm/[100%]" to="/Terms"> Terms and Conditions </RouterLink>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>

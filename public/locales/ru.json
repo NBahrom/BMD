@@ -6,9 +6,9 @@
     "artists": "Артисты",
     "about": "О нас",
     "book": "Бронь",
-    "booking": "Забронировать",
+    "booking": "Бронь",
     "nav": "Навигация",
-    "events": "Главные события"
+    "events": "Портфолио"
   },
   "btns": {
     "loadMore": "Загрузить ещё",
@@ -21,10 +21,10 @@
   },
   "about": {
     "title": "About us",
-    "desc": " <b> Агентство The Show Time </b>   – это тщательно отобранное агентство, объединяющее лучших музыкантов и диджеев Узбекистана. Мы оказываем полную поддержку:от подбора артистов для конкретного формата площадки до организации выступлений и контроля качества. <b> Работая с нами, вы гарантированно получите профессионализм, высококачественное представление и уникальную атмосферу.</b> ",
+    "desc": " <b> The Show Time Agency </b>   – это тщательно отобранное агентство, объединяющее лучших музыкантов и диджеев Узбекистана. Мы оказываем полную поддержку:от подбора артистов для конкретного формата площадки до организации выступлений и контроля качества. <b> Работая с нами, вы гарантированно получите профессионализм, высококачественное представление и уникальную атмосферу.</b> ",
     "advantagesTitle": "Advantages",
     "partnersCaption": "имеем честь работать с лучшими",
-    "eventsTitle": "Featured Events",
+    "eventsTitle": "Главные события",
     "eventsBtn": "Показать все события",
     "eventsBtnLess": "Скрыть",
     "founders": {
@@ -92,7 +92,7 @@
         "text": "лучшие на рынке Узбекистана"
       },
       "slide2": {
-        "title": "Полная ответственность за качество, ",
+        "title": "Ответственность за качество, ",
         "text": "тайминг и сценическую подачу"
       },
       "slide3": {
@@ -108,7 +108,7 @@
         "text": "с международного уровня"
       },
       "slide6": {
-        "title": "Гарантия уникальной атмосферы ",
+        "title": "Уникальная атмосферы ",
         "text": "и эмоционального эффекта для гостей"
       }
     }
@@ -240,6 +240,24 @@
     },
     "silkband": {
       "name": "Silk band",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+    "ben": {
+      "name": "Ben Zaplavski",
+      "desc": [
+        "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
+        "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",
+        "Receiving support from renowned industry names including Tale Of Us, Tiesto, Camelphat, Adriatique, Mathame, Mind Against, Innellea, and more, highlights 19:26's impact on the music scene.",
+        "Dedicated to evolving, collaborating, and innovating, 19:26 continues to explore creative avenues, ensuring a dynamic artistic journey. As a sought-after DJ globally, 19:26 consistently delivers standout performances at major festivals and intimate clubs, showcasing versatility and pushing the boundaries of its unique sound."
+      ]
+    },
+    "elizaveta": {
+      "name": "Elizaveta Shus",
       "desc": [
         "Established in Milan in 2019, 19:26 is an innovative Italian electronic music project that combines ambient and neoclassical elements within the melodic techno genre.",
         "Having earned recognition worldwide, 19:26 has left a significant mark with releases on prominent labels such as Afterlife, Siamese, Zamna Records, and others of similar influence.",

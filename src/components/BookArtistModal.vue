@@ -83,7 +83,7 @@ watch(
         <div 
             v-if="open" 
             @click.self="emit('update:open', false)"
-            class="bg-[#3d3d3d67] fixed flex top-0 left-0 w-full h-full px-11.25 z-10 overflow-auto"
+            class="bg-[#3d3d3db0] fixed flex top-0 left-0 w-full h-full px-11.25 z-10 overflow-auto"
         >
             <div class="m-auto py-13 px-6.25 bg-white w-full relative min-h-141.25 md:w-125 md:p-13 lg:min-h-147.5">
                 <button @click="emit('update:open', false)" class="absolute cursor-pointer p-1.5 bg-[#181818] w-fit translate-x-1/2 -translate-y-1/2 top-0 right-1/2 md:translate-0 md:p-0 md:bg-transparent md:top-6.75 md:right-6.75"><CloseIcon class="[&_path]:fill-white md:[&_path]:fill-[#C8CDCF]"/></button>
@@ -97,7 +97,7 @@ watch(
                         <BaseInput type="tel" name="tel" id="tel" :placeholder="t('bookModal.telNumInput')" />
                         <BaseInput class="h-31.75 md:h-36.5" input-type="textarea" name="message" id="message" :placeholder="t('bookModal.messageInput')"></BaseInput>
                         <button 
-                            :class="cn('px-13.75 py-5.5 flex justify-center items-center bg-[#181818] text-sm/[100%] text-white uppercase mt-2.5 opacity-100! w-full md:w-fit md:mx-auto', error && 'form-error' )" 
+                            :class="cn('px-13.75 py-5.5 min-w-48.75 flex justify-center items-center bg-[#181818] text-sm/[100%] text-white uppercase mt-2.5 opacity-100! w-full md:w-fit md:mx-auto', error && 'form-error' )" 
                             type="submit"
                             :disabled="isLoading"
                         >

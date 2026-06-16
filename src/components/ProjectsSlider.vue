@@ -120,7 +120,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="mb-17.5 overflow-hidden lg:mb-38.75">
+    <div class="mb-17.5 overflow-hidden lg:mb-22.5">
         <div class="container">
             <div
                 ref="viewportRef"

@@ -19,7 +19,7 @@
           </h1>
           <p
             v-html="t('about.desc')"
-            class="font-heading text-[20px]/[1.4] italic text-[#18181880] [&_b]:font-bold [&_b]:text-[#181818] md:text-[24px]/[1.4]"
+            class="font-heading font-normal text-[20px]/[1.4] italic text-[#18181880] [&_b]:font-bold [&_b]:text-[#181818] md:text-[24px]/[1.4]"
           />
         </div>
       </div>

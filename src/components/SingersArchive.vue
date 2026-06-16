@@ -59,7 +59,7 @@ function loadMore() {
 </script>
 
 <template>
-    <div class="mb-16.25 md:mb-17.5 lg:mb-30">
+    <div class="mb-16.25 md:mb-17.5 lg:mb-22.5">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-7.5 md:gap-y-10 lg:gap-y-15">
             <div  
                 v-for="(singer, index) in visibleSingers"

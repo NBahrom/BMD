@@ -8,7 +8,7 @@ import { cn } from '@/lib/cn';
 import Spinner from './icons/Spinner.vue';
 import TIckIcon from './icons/TIckIcon.vue';
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = "https://the-show-time.agency/api"
 const { t } = useI18n()
 const error = ref<boolean>(false)
 const isLoading = ref<boolean>(false)

@@ -22,7 +22,7 @@
   "about": {
     "title": "About us",
     "desc": " <b> The Show Time Agency </b>   – это тщательно отобранное агентство, объединяющее лучших музыкантов и диджеев Узбекистана. Мы оказываем полную поддержку:от подбора артистов для конкретного формата площадки до организации выступлений и контроля качества. <b> Работая с нами, вы гарантированно получите профессионализм, высококачественное представление и уникальную атмосферу.</b> ",
-    "advantagesTitle": "Advantages",
+    "advantagesTitle": "Преимущества",
     "partnersCaption": "имеем честь работать с лучшими",
     "eventsTitle": "Главные события",
     "eventsBtn": "Показать все события",
@@ -30,17 +30,17 @@
     "founders": {
       "founder1": {
         "name": "Azizbek Gazinazarov",
-        "role": "со-основатель, DJ",
+        "role": "Основатель, CEO",
         "bio": "In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us, such as hosting our services and data, managing how our services function, hosting our customer relationship management"
       },
       "founder2": {
         "name": "Iskandar ikrami",
-        "role": "со-основатель, DJ",
+        "role": "Исполнительный продюсер",
         "bio": "In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us, such as hosting our services and data, managing how our services function, hosting our customer relationship management"
       },
       "founder3": {
         "name": "marat bikineev",
-        "role": "со-основатель, DJ",
+        "role": "Креативный продюсер",
         "bio": "In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us, such as hosting our services and data, managing how our services function, hosting our customer relationship management"
       }
     },
